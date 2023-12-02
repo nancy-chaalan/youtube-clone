@@ -1,0 +1,237 @@
+.container-fluid{
+  width: 100%; 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+   }
+ 
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+
+
+
+
+
+/* three icons to the right */
+
+.icons {
+  display: flex;
+  gap: 25px;
+  right: 0;
+  margin: 15px 20px;
+}  
+
+.icons svg {
+  fill: white;
+  fill-opacity: 0.6;
+  transition: fill 0.3s ease; 
+}
+
+.icons svg:hover {
+  fill: white;/* Replace with your desired hover color */
+  fill-opacity: 1; 
+}
+
+
+svg {
+  height: 24px;
+  width: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Transition for smooth color change */
+}
+
+
+
+
+
+
+
+/* the whole container */
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
+    /* position: fixed; */
+    
+  }
+
+
+
+
+
+
+
+.search input{
+    background: linear-gradient(135deg, rgba(15, 85, 232, 0.10) 0%, rgba(157, 223, 243, 0.10) 100%);
+    border-radius: 40px;
+    border: 1px rgba(255, 255, 255, 0.50) solid;
+    width: 445px;
+    height: 40px;
+    top: 8px;
+  }
+  
+.search {
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+     /* margin-left:35%;  */
+  }
+  
+input[type="text"] {
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid #ccc;
+    outline: none;
+    color: white;
+  }
+  
+.search img {
+    position: absolute;
+    right: 10px; /* Adjust the right positioning as needed */
+    cursor: pointer;
+  }
+  
+  .search svg {
+    position: absolute;
+ 
+  }
+  
+
+
+
+  .dots .div1{
+    width: 100%; 
+    height: 100%; 
+    position: relative;
+    margin: 10px 15px;
+  }
+
+
+
+
+
+  
+
+
+ /* Papaya title + button  */
+.title {
+  margin-left: 5px;
+  display: flex;
+  color: white;
+}
+
+#svgPapaya {
+  display: flex;
+}
+
+#svgPapaya .Papaya svg {
+  width: 100px;
+  margin: 15px 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#svgPapaya .Papaya svg:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+.title .row .col #menu-toggle{ 
+    margin-left: 10px;
+    cursor: pointer;
+    margin: 15px 5px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu-toggle:hover {
+  transform: scale(1.2);
+}
+
+#menu-toggle.clicked {
+  transform: rotate(-180deg);
+}
+
+
+
+
+
+
+
+
+
+  
+
+/* responsive css */
+@media only screen and (max-width:929px) {
+
+  .search input{
+    width: 345px;
+  }
+  
+
+
+}
+
+
+
+/* responsive css */
+@media only screen and (max-width:780px) {
+
+  .search input{
+    width: 245px;
+  }
+  
+
+
+}
+
+/* responsive css */
+@media only screen and (max-width:575px) {
+
+  /* search input width  */
+  .search input{
+    width: 220px;
+  }
+  
+
+
+/* icons to the right  */
+  .icons {
+    display: flex;
+    gap: 15px;
+    right: 0;
+    margin: 15px 20px;
+  }  
+  
+  .icons svg {
+    fill: white;
+    fill-opacity: 0.6;
+    transition: fill 0.3s ease; 
+  }
+  
+  .icons svg:hover {
+    fill: white;/* Replace with your desired hover color */
+    fill-opacity: 1; 
+  }
+  
+  
+  svg {
+    height: 20px;
+    width: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Transition for smooth color change */
+  }
+  
+
+}

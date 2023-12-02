@@ -1,0 +1,205 @@
+* {
+    /* font-family: 'Arial', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+
+.sidebar-nav-wrapper {
+  height: 100vh;
+  background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
+  padding-top: 10px;
+  overflow-y: hidden;
+  overflow-x: hidden; 
+  margin-top: 100px;
+  }
+
+
+
+
+
+
+  .overlay {
+    /* Styles for the overlay, covering the entire page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    z-index: 1000; /* ensure it's above the sidebar */
+    display: none; /* initially hidden */
+  }
+  
+  .sidebar-nav-wrapper.open + .overlay {
+    display: block; /* show the overlay when the sidebar is open */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  .sidebar-nav-wrapper .list-group-item-action:not(:last-child) {
+    border-bottom: 1px solid rgba(85, 85, 85, 0.5); 
+    margin: 0 ; 
+  }
+
+
+/* sidebar links */
+.sidebar-nav-wrapper div a {
+  width: 248px;
+  height: 50px;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  letter-spacing: 0em;
+  color: rgba(235, 235, 245, 0.60);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 22px;
+  word-wrap: break-word;
+  
+}
+
+
+.sidebar-nav-wrapper div a .svgIcon {
+  float: left;
+  margin-right: 20px;
+}
+
+.sidebar-nav-wrapper div a .titlrOfSvg {
+  align-content: center;
+}
+
+.sidebar-nav-wrapper div a:hover,
+.sidebar-nav-wrapper div a:active,
+.sidebar-nav-wrapper div a:focus {
+  cursor: pointer;
+  color: white;
+  background: radial-gradient(38.89% 100.00% at 40.88% 0.00%, #8015A7 0%, rgba(97, 54, 144, 0) 100%);
+  width: 240px; 
+  left: 0px; 
+  }
+  
+
+  .sidebar-nav-wrapper div a .svgIcon svg:hover,
+  .sidebar-nav-wrapper div a .svgIcon svg:active,
+  .sidebar-nav-wrapper div a .svgIcon svg:focus {
+    fill: white;
+     border-radius: 9999px;
+    border: 1px #C427FB solid; 
+
+    }
+
+
+
+  
+.dots .div1{
+    width: 100%; 
+    height: 100%; 
+    position: relative;
+    margin: 5px 15px;
+  }
+
+
+
+
+
+
+ /* Papaya title + button  */
+.title {
+  display: flex;
+  color: white;
+  width: 248px;
+  /* height: 56px; */
+  padding: 15px, 84px, 0px, 24px;
+  margin-top: 50px;
+}
+
+.title .Papaya svg{
+    left: 64px;
+    width: 100;
+    height: 27;
+}
+
+.title .btn svg{ 
+    width: 20px;
+    height: 28px;
+    margin:0 15px 5px 10px;
+}
+
+
+
+.list-group-item-action svg {
+  width: 34px; 
+  height: 34px;
+  position:absolute;
+}
+
+.list-group-item-action .home{
+  width: 25px; 
+  height: 20px;
+}
+
+#divItems svg path {
+  fill: white; /* Set the fill color of the Home SVG path */
+}
+
+#divItems a {
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set the text color as needed */
+  margin-top: 10px; /* Adjust the margin as needed to separate the link from the SVG */
+}
+
+
+.list-group-item-action {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set the text color as needed */
+  position: relative;
+}
+
+
+#divItems {
+  display: flex;
+}
+
+
+
+
+
+/* title in sidebar */
+h6 {
+      margin-top: 10px;
+      color: #FFFFFF80;
+      padding: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 17px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      height: 17px;
+      left: 16px;
+
+      text-transform: uppercase;
+}
+
+
+
+
+
+
+
+  

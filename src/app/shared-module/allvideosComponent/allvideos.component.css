@@ -1,0 +1,169 @@
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-top: 112px;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #2B2F53 0%, #1D1C34 34%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.custom-margin {
+  margin-right: 5px; 
+}
+
+#mainRow {
+  width: 100%;
+  padding: 5px;
+  justify-content: space-between;
+  display:inline-flex;
+}
+
+#oneCard {
+  /* gap: 2px; */
+  /* margin-right: 1px; */
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  margin: 10px 2px;
+  background: linear-gradient(180deg, rgba(72, 49, 157, 0.20) 0%, rgba(72, 49, 157, 0) 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(44, 0, 166, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 4px 8px rgba(203, 13, 255, 0.1);
+}
+
+
+
+.image-container {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+
+.card-img-top {
+  cursor: pointer;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+
+  object-fit: cover;
+
+  width: 360px;
+  height: 220px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  background: #000;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: small;
+}
+
+.card-body {
+  padding: 0;
+}
+
+#bodyOftheCard {
+  padding: 8px 2px;
+}
+
+.col #SvgInCard {
+  flex: 1;
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.card-text {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#TextNextToSvg {
+  flex: 7;
+  padding: 0;
+  padding-left:3px ;
+}
+
+#TextNextToSvg .Channel-Name {
+  margin: 0;
+  padding: 0;
+  color: rgba(202, 202, 202, 0.9);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  word-wrap: break-word;
+  text-transform: uppercase;
+}
+
+.views-date {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+@media screen and (min-width: 1120px) {
+  #mainRow {
+    justify-content: space-around; 
+  }
+
+  #oneCard {
+    width: 380px;
+    height: 350px;
+    margin-right: 0; /* No right margin between cards */
+  }
+}
+
+
+
+@media screen and (max-width: 1155px) {
+  .card-img-top {
+    object-fit: cover;
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .image-container {
+    width: 100%; /* Ensure the container takes the full width of its parent */
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 799px) {
+  .card {
+    width: 370px; /* Adjust max-width for larger screens */
+  }
+  #mainRow {
+    display: inline-flex;
+  }
+}
+
+
+

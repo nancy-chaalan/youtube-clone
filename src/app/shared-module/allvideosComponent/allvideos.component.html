@@ -1,0 +1,82 @@
+<app-shimmer *ngIf="done"></app-shimmer>
+
+<div class="container-fluid" *ngIf="!done">
+    
+
+    <div id="mainRow" class="row">
+
+
+      <div id="oneCard" class="card col-md-4" *ngFor="let vid of allVideos, let i = index">
+
+
+                 <!-- Image + time -->
+          <div class="image-container">        
+            <img  class="card-img-top" [src]="vid.img" (click)="moveToRouteWithIndex('/videos/view',vid.id)">                   
+              <div class="bottom-right">{{vid.videoTime}}</div>          
+          </div>
+
+
+          <!-- div under the img -->
+          <div class="card-body">
+            <div id="bodyOftheCard" class="row">
+            
+              <div class="col" id="col1">
+                <img id="SvgInCard" [src]="vid.smallImg" alt="">
+              </div>
+             
+             
+              <div id="TextNextToSvg" class="col">
+                <a (click)="moveToRouteWithIndex('/videos/view', vid.id)" class="card-text">{{ vid.title }}</a>
+                <p class="Channel-Name">{{ vid.channelName }}</p>
+                <p class="views-date">{{ vid.views }} views ● {{ vid.date }}</p>
+              </div>
+
+            </div>
+    
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div style="display:inline-flex;" class="row">
+
+    <div class="card cardss col-md-4">
+      <div class="image-container">
+            <img class="card-img-top" src="../../assets/images/deals/img mask.png" width="380px" height="220px"  alt="Card image" >
+            <div class="bottom-right">dsghfg</div>
+          </div>
+          <div class="card-body">
+            <div id="bodyOftheCard" class="row">
+              <div class="col" id="col1">
+                <img id="SvgInCard" src="" alt="">
+              </div>
+              <div id="TextNextToSvg" class="col">
+                <a  class="card-text">gdfjgdsfj</a>
+                <p class="Channel-Name">hgdhgs</p>
+                <p class="views-date">hdsfjkhdfkjshkdsfj h kjfdhkdsfhk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->

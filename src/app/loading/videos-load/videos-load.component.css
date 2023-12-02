@@ -1,0 +1,85 @@
+.container-fluid {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;   
+    background: linear-gradient(180deg, #2B2F53 0%, #1D1C34 34%);
+ }
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add this to your component's CSS or in styles.css */
+.custom-margin {
+  margin-right: 5px; /* Adjust the value as needed */
+}
+
+
+#mainRow {
+    margin: 0 -15px; /* Adjust negative margin for proper spacing */
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px; 
+    margin: 15px;
+    background: linear-gradient(180deg, rgba(72, 49, 157, 0.20) 0%, rgba(72, 49, 157, 0) 100%);
+    border-radius: 16px;
+    box-shadow:0 4px 20px rgba(44, 0, 166, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+
+
+
+  
+ .card-text {
+    background:  rgba(72, 49, 157, 0.20);
+    /* border-style: solid; */
+    /* border-color: rgba(72, 49, 157, 0.20); */
+    border-radius: 20px;
+
+ }
+
+
+
+  .card-img-top {
+    cursor: pointer;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background:  rgba(72, 49, 157, 0.20)
+  }
+
+
+
+
+  
+#bodyOftheCard {
+    padding: 10px;
+  }
+
+
+#bodyOftheCard #col1 {
+align-items: center;
+} 
+
+
+
+.col #SvgInCard {
+    flex: 1;
+    width: 40px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    background:  rgba(72, 49, 157, 0.20);
+
+  }
+  
+
+
