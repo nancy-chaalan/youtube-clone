@@ -1,0 +1,91 @@
+.container-fluid {
+    width: 100%;
+    height: 100vh;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+  
+    background: linear-gradient(180deg, #2B2F53 0%, #1D1C34 34%);
+  }
+  
+  
+  * { box-sizing: border-box; }
+  
+  
+  
+
+.upload-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #766c84;
+    margin-top: 50px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+label {
+    font-weight: bold;
+  }
+  
+#videoTitle{
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+  
+
+#videoFile{
+    padding: 10px;
+    margin-top: 5px;
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    color: whitesmoke;
+    background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
+  }
+  
+
+textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+
+  
+button {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  width: 50%;
+  box-sizing: border-box;
+  background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
+  color: #fff;
+  cursor: pointer;
+}
+  
+  button:hover {
+    background-color: #2e63b6;
+  }
+  

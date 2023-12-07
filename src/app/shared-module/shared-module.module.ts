@@ -8,9 +8,7 @@ import { EverythingComponent } from './everything/everything.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-import { SidebarToggleBtnComponent } from '../sidebar-toggle-btn/sidebar-toggle-btn.component';
 import { FooterComponent } from './footer/footer.component';
-import { loadingRoutingModule } from '../loading/loading-routing.module';
 import { LoadingModule } from '../loading/loading.module';
 
 
@@ -22,7 +20,6 @@ import { LoadingModule } from '../loading/loading.module';
     HeaderComponent,
     NavbarComponent,
     SidebarComponent,
-    SidebarToggleBtnComponent,
     FooterComponent,
 
   ],
@@ -33,7 +30,6 @@ import { LoadingModule } from '../loading/loading.module';
   HeaderComponent,
   NavbarComponent,
   SidebarComponent,
-  SidebarToggleBtnComponent
   ],
 
   imports: [

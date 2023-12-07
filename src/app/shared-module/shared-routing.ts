@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: "navbar", component:NavbarComponent},
   {path: "header", component:HeaderComponent},
   {path: "sidebar", component:SidebarComponent},
-
+  {path: "stories", component:StoriesComponentComponent},
 
 ];
 

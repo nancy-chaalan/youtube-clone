@@ -14,7 +14,7 @@
 .row{
   margin: 0 30px;
   overflow-y: hidden;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 
@@ -57,7 +57,16 @@
   margin-bottom: 8px;
 }
 
-.author {
+
+#author {
   font-size: 14px;
   color: #ccc;
+}
+
+
+#SvgInCard {
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  flex: 1;
 }

@@ -3,102 +3,35 @@
 
   <div class="row">
 
-    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-      <div class="story-card">
-        <div class="thumbnail">
-          <img src="https://via.placeholder.com/300x300" alt="Thumbnail">
-          <div class="content">
-            <div class="title">Awesome Story Title</div>
-            <div class="author">by John Doe</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-      <div class="story-card">
-        <div class="thumbnail">
-          <img src="https://via.placeholder.com/300x300" alt="Thumbnail">
-          <div class="content">
-            <div class="title">Awesome Story Title</div>
-            <div class="author">by John Doe</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="story-card">
-            <div class="thumbnail">
-              <img src="https://via.placeholder.com/300x300" alt="Thumbnail">
-              <div class="content">
-                <div class="title">Awesome Story Title</div>
-                <div class="author">by John Doe</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-              <div class="story-card">
-                <div class="thumbnail">
-                  <img src="https://via.placeholder.com/300x300" alt="Thumbnail">
-                  <div class="content">
-                    <div class="title">Awesome Story Title</div>
-                    <div class="author">by John Doe</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                  <div class="story-card">
-                    <div class="thumbnail">
-                      <img src="https://via.placeholder.com/300x300" alt="Thumbnail">
-                      <div class="content">
-                        <div class="title">Awesome Story Title</div>
-                        <div class="author">by John Doe</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-
-
-
-                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+           <div *ngFor="let story of storiesArray" class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
                       <div class="story-card">
                         <div class="thumbnail">
-                          <img src="https://via.placeholder.com/300x300" alt="Thumbnail">
+                          <img src={{story.img}} alt="Thumbnail">
+
                           <div class="content">
-                            <div class="title">Awesome Story Title</div>
-                            <div class="author">by John Doe</div>
+                            <div class="title">{{story.title}}</div>
+                           
+                            <div class="row">
+                              <img src={{story.smallImg}} alt="" class="col" id="SvgInCard">
+                              <div id="author" class="col">{{story.channelName}}</div>
+                            </div>
+                           
                           </div>
+
                         </div>
                       </div>
                     </div>
 
               
-                  </div>          
-                </div>
+    </div>   
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+
+
+   </div>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
 
 

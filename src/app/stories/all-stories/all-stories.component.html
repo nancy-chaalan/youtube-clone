@@ -1,0 +1,32 @@
+
+<div class="container-fluid">
+
+<div class="col" id="wholeCol">
+
+    <div id="OneCard" *ngFor="let story of storiesArray" class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+               
+      <div class="story-card">
+
+                 <div class="thumbnail">
+                   <img src={{story.img}} alt="Thumbnail">
+
+                   <div class="content">
+                     <div class="title">{{story.title}}</div>
+                    </div>
+
+                     <div class="row">
+                       <img src={{story.smallImg}} alt="" class="col" id="SvgInCard">
+                       <div id="author" class="col">{{story.channelName}}</div>
+                     </div>
+                    
+                  
+
+                 </div>
+
+        </div>
+
+             </div>
+
+       
+</div>
+</div>

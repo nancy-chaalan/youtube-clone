@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { StoryServiceService } from 'src/app/services/story-service.service';
 
 @Component({
   selector: 'app-stories-component',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class StoriesComponentComponent {
 
+ @Input() shorts: boolean = false;
+
+  constructor(private service : StoryServiceService){}
+
+  storiesArray : any [] = this.service.allStories ;
+
+
 }
+

@@ -1,0 +1,84 @@
+.container-fluid {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #2B2F53 0%, #1D1C34 34%);
+  }
+
+  
+* {
+    box-sizing: border-box;
+  }
+  
+
+#wholeCol {
+    margin: 10px 5px 0 5px;
+  }
+
+  
+#OneCard {
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    height: 550px;
+    max-width: 350px;
+    margin-bottom: 5px;
+}
+
+
+.story-card {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  
+.thumbnail {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    /* margin-bottom: 22px; */
+  }
+  
+.thumbnail img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+  }
+
+  
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    color: #fff;
+  }
+  
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  
+#author {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  
+.row #SvgInCard {
+    width: 25px;
+    height: 35px;
+    border-radius: 50%;
+    /* flex: 1; */
+  }

@@ -12,7 +12,10 @@ import { VideoServiceService } from 'src/app/services/video-service.service';
 export class ShowVideoComponent {
 
 
-  
+  isThumbsUpClicked: boolean = false;
+  thumbsUpCount: number = 0;
+
+  isThumbsDownClicked: boolean = false;
 
   title = "PAPAYA";
   rating: number = 0;
@@ -28,10 +31,21 @@ export class ShowVideoComponent {
 
     // this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+this.viewedVideo.videoID);
     // this.sanitizedVideoID = this.sanitizer.bypassSecurityTrustResourceUrl(this.viewedVideo.videoID);
-    console.log(this.videoUrl)
+    // console.log(this.videoUrl)
   }
 
   // Assuming viewedVideo.videoID is your dynamic video ID
+
+
+handleThumbsUpClick() {
+    this.isThumbsUpClicked = !this.isThumbsUpClicked;
+    // this.thumbsUpCount += this.isThumbsUpClicked ? 1 : -1;
+  }
+
+  handleThumbsDownClick() {
+    this.isThumbsDownClicked = !this.isThumbsDownClicked;
+    // this.thumbsUpCount += this.isThumbsUpClicked ? 1 : -1;
+  }
 
 
 ngOnInit(): void {
@@ -46,12 +60,9 @@ ngOnInit(): void {
 
 getVidByID(id : number){
   this.viewedVideo = this.service.GetVideoById(id);
-  console.log(this.viewedVideo.videoID);
+  // console.log(this.viewedVideo.videoID);
   this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+this.viewedVideo.videoID);
 }
-
-
-
 
 
 

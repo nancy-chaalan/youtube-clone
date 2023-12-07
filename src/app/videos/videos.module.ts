@@ -8,6 +8,9 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { RightbarvideosComponent } from './rightbarvideos/rightbarvideos.component';
 import { ShowVideoComponent } from './show-video/show-video.component';
 import { AppModule } from '../app.module';
+import { AddvideoComponent } from './addvideo/addvideo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -15,8 +18,7 @@ import { AppModule } from '../app.module';
     AllvideosComponent,
     RightbarvideosComponent,
     ShowVideoComponent,
-
-
+    AddvideoComponent,
   ],
 
   imports: [
@@ -26,8 +28,8 @@ import { AppModule } from '../app.module';
   ],
 
   exports: [
-
   ],
+  
 })
 
 export class VideosModule { }

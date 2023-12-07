@@ -13,18 +13,18 @@
 
 
 .header {
-    /* width: 100%;  */
+ /* width: 100%;  */
     height: 56px;
-    /* top: 56px; */
-    /* left: 248px;  */
-    background: radial-gradient(ellipse at bottom, #8015A7 0%, #2E335A 70%);
-   
-
-/*  
-    overflow-x: scroll;
+    width: 100vw;
+ /* top: 56px; */
+ /* left: 248px;  */
+    background: radial-gradient(ellipse at bottom, #612778 0%, #2E335A 40%);
+ /* overflow-x: scroll;
     scroll-behavior: smooth;
-    overflow-y: hidden; */
-
+    overflow-y: hidden; 
+    overscroll-behavior: contain; */
+    /* border-bottom: #612778; */
+    /* border-style: solid; */
 
 }
 
@@ -37,12 +37,9 @@
     justify-content: center; 
     align-items: center; 
     gap: 48px; 
-    display: inline-flex
+    display: inline-flex;
+    flex-direction: row;
 }
-
-
-
-
 
 
 
@@ -54,27 +51,19 @@
 }
 
 
-
-
-
-
 .navbar li a {
     color: rgba(235, 235, 245, 0.60);
     font-size: 14px;
     text-decoration: none;
 }
 
-.navbar li a:hover,
-.navbar li a:focus,
-.navbar li a:active {
+
+.navbar li a:hover,   .navbar li a:focus,  .navbar li a:active {
   color: white;
   transform: scale(1.1);
-
 }
 
-.navbar li:hover{
 
-}
 
 .navbar li a.right {
   float: right;

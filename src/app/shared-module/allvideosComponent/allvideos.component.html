@@ -1,82 +1,39 @@
-<app-shimmer *ngIf="done"></app-shimmer>
-
-<div class="container-fluid" *ngIf="!done">
-    
-
-    <div id="mainRow" class="row">
 
 
-      <div id="oneCard" class="card col-md-4" *ngFor="let vid of allVideos, let i = index">
+
+<div class="container-fluid">
 
 
-                 <!-- Image + time -->
-          <div class="image-container">        
-            <img  class="card-img-top" [src]="vid.img" (click)="moveToRouteWithIndex('/videos/view',vid.id)">                   
-              <div class="bottom-right">{{vid.videoTime}}</div>          
-          </div>
+        <div class="list-container">
 
+          <div class="div-list" *ngFor="let vid of allVideos" (click)="moveToRouteWithIndex('/videos/view', vid.id)">
 
-          <!-- div under the img -->
-          <div class="card-body">
-            <div id="bodyOftheCard" class="row">
-            
-              <div class="col" id="col1">
-                <img id="SvgInCard" [src]="vid.smallImg" alt="">
+            <!-- <a> -->
+                  <img  class="thumbnail" [src]="vid.img" (click)="moveToRouteWithIndex('/videos/view',vid.id)">
+                  <!-- <div class="bottom-right">{{vid.videoTime}}</div> -->
+            <!-- </a> -->
+
+                <div class="flex-div">
+
+                  <div class="col col1">
+                    <img [src]="vid.smallImg" alt="">
+                  </div>
+
+                  <div class="col col2">
+                  <div class="vid-info">
+                    <a (click)="moveToRouteWithIndex('/videos/view', vid.id)">{{ vid.title }}</a>
+                    <p>{{ vid.channelName }}</p>
+                    <p>{{ vid.views }} views ● {{ vid.date }}</p>
+                  </div>
+                </div>
+ 
+                  </div>
+                </div>
+                
               </div>
-             
-             
-              <div id="TextNextToSvg" class="col">
-                <a (click)="moveToRouteWithIndex('/videos/view', vid.id)" class="card-text">{{ vid.title }}</a>
-                <p class="Channel-Name">{{ vid.channelName }}</p>
-                <p class="views-date">{{ vid.views }} views ● {{ vid.date }}</p>
-              </div>
-
-            </div>
-    
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
 
-  
+</div> 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <div style="display:inline-flex;" class="row">
-
-    <div class="card cardss col-md-4">
-      <div class="image-container">
-            <img class="card-img-top" src="../../assets/images/deals/img mask.png" width="380px" height="220px"  alt="Card image" >
-            <div class="bottom-right">dsghfg</div>
-          </div>
-          <div class="card-body">
-            <div id="bodyOftheCard" class="row">
-              <div class="col" id="col1">
-                <img id="SvgInCard" src="" alt="">
-              </div>
-              <div id="TextNextToSvg" class="col">
-                <a  class="card-text">gdfjgdsfj</a>
-                <p class="Channel-Name">hgdhgs</p>
-                <p class="views-date">hdsfjkhdfkjshkdsfj h kjfdhkdsfhk</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->

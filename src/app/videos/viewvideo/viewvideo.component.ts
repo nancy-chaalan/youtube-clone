@@ -12,46 +12,46 @@ import { VideoServiceService } from 'src/app/services/video-service.service';
 })
 export class ViewvideoComponent{
 
-  title = "PAPAYA";
-  rating: number = 0;
+  // title = "PAPAYA";
+  // rating: number = 0;
   
-  Comments : any;
-  alllvideos : any [] = this.service.allVideos;
+  // Comments : any;
+  // alllvideos : any [] = this.service.allVideos;
 
   
-  viewedVideo : any =  {id: 0, videoID: '', img:'',title:'', channelName:'', date:'', views:0, smallImg: ''};
+  // viewedVideo : any =  {id: 0, videoID: '', img:'',title:'', channelName:'', date:'', views:0, smallImg: ''};
   
-  videoUrl: any;
-  sanitizedVideoID: any;
+  // videoUrl: any;
+  // sanitizedVideoID: any;
   
 
-  constructor(private router:Router, private fb: FormBuilder, private route: ActivatedRoute, private service: VideoServiceService,private sanitizer: DomSanitizer){
-  }
+  // constructor(private router:Router, private fb: FormBuilder, private route: ActivatedRoute, private service: VideoServiceService,private sanitizer: DomSanitizer){
+  // }
 
 
 // function for editing the selected item
-moveToRouteWithIndex(route:string, id:number){
-  this.router.navigate( [route], { queryParams: { id: id } }).then(() => window.scrollTo(0,0));
-}
+// moveToRouteWithIndex(route:string, id:number){
+//   this.router.navigate( [route], { queryParams: { id: id } }).then(() => window.scrollTo(0,0));
+// }
 
 
 // Assuming viewedVideo.videoID is your dynamic video ID
 
 
-ngOnInit(): void {
-this.route.queryParams.subscribe(params => {
-  const productid = params['id'];
-  this.getVidByID(productid);
-})
+// ngOnInit(): void {
+// this.route.queryParams.subscribe(params => {
+//   const productid = params['id'];
+//   this.getVidByID(productid);
+// })
 
-}
+// }
 
 
-getVidByID(id : number){
-this.viewedVideo = this.service.GetVideoById(id);
-console.log(this.viewedVideo.videoID);
-this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+this.viewedVideo.videoID);
-}
+// getVidByID(id : number){
+// this.viewedVideo = this.service.GetVideoById(id);
+// console.log(this.viewedVideo.videoID);
+// this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+this.viewedVideo.videoID);
+// }
 
 
 

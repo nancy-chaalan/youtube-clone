@@ -1,1 +1,49 @@
-<p>signup works!</p>
+<div class="container-fluid">
+
+    <div class="card">
+
+     <button class="insertImage" (click)="openFileExplorer()">
+      <input type="file" style="display: none" (change)="handleFileInput($event)"/>
+      <img [src]="imageUrl" alt="Person" class="card__image"> 
+    </button>
+    
+    
+<div class="inputs">
+
+        <div class="row">
+            <input type="text" placeholder="First Name">
+        </div>
+
+        <div class="row">
+            <input type="text" placeholder="Last Name">
+        </div>
+
+        <div class="row">
+            <input type="email" placeholder="Email">
+        </div>
+
+        <div class="row">
+            <input type="password" placeholder="Password">
+        </div>
+
+        <div class="row">
+            <input type="date" placeholder="Birth-Date">
+        </div>
+  
+
+
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Sign Up</button>
+
+
+</div>
+
+</div>
+
+</div>
+  
