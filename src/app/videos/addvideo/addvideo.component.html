@@ -1,26 +1,118 @@
 <div class="container-fluid">
 
-<div class="upload-container">
+
+
+<!-- Left Container -->
+<div class="upload-container cont1">
+
     <h1>Upload a Video</h1>
-    <form (ngSubmit)="onSubmit()">
+
+    <form [formGroup]="myForm">
+
+      <!-- video title -->
       <div class="form-group">
         <label for="videoTitle">Video Title:</label>
-        <input type="text" id="videoTitle" name="videoTitle" required>
+        <input type="text" id="videoTitle" name="videoTitle" required (input)="onFieldChange('title', myForm.get('title')?.value)" >
       </div>
-  
+
+      <!-- video inside description -->
       <div class="form-group">
         <label for="videoDescription">Video Description:</label>
-        <textarea id="videoDescription" name="videoDescription" required></textarea>
+        <textarea id="videoDescription" name="videoDescription" required (input)="onFieldChange('title', myForm.get('title')?.value)"></textarea>
       </div>
-  
-      <div class="form-group">
+
+      <!-- video file -->
+    <div class="form-group">
         <label for="videoFile">Select a Video File:</label>
-        <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
-      </div>
-  
-      <button type="submit">Upload Video</button>
+        <input type="file" id="videoFile" name="videoFile" accept="video/*" required (input)="onFieldChange('title', myForm.get('title')?.value)">
+    </div>
+
+      <!-- Image title -->
+    <div class="form-group">
+        <label for="imageFile">Select an image File:</label>
+        <input type="file" id="imageFile" name="imageFile" accept="image/*" (change)="onFileChange($event)" required (input)="onFieldChange('title', myForm.get('title')?.value)">
+    </div>
+
+
+    <div *ngIf="showAlert" id="customAlert" class="alert">
+        <i class="closebtn" (click)="removeAlert()">x</i>
+        <strong>Alert!</strong> 
+        The selected image dimensions are too large. Please choose an image with dimensions less than 16:9 ratio.
+    </div>  
+
+<!-- Display the selected image with specific width and height -->
+<img *ngIf="selectedImage" [src]="selectedImage" alt="Selected Image" style="width: 200px;">
+
+
+<button (click)="onSubmit()" type="submit">Upload Video</button>
+
     </form>
+
+
   </div>
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="upload-container cont2">
+
+    <h1>User view</h1>
+
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+
+        <div class="list-container">
+
+          <div class="div-list">
+
+            <!-- <a> -->
+                  <img  class="thumbnail" [src]="selectedImage">
+                  <!-- <div class="bottom-right">{{vid.videoTime}}</div> -->
+            <!-- </a> -->
+
+                <div class="flex-div">
+
+                  <div class="col col1">
+                    <img alt="" [src]="selectedImage">
+                  </div>
+
+                  <div class="col col2">
+                  <div class="vid-info">
+                    <!-- <a>{{myForm.get('title')?.value}}</a> -->
+                    <a>htrrtth</a>
+                    <p>fdgdf</p>
+                    <p>1k views ● {{ currentDate | date:"longDate" }}</p>
+                  </div>
+                </div>
+ 
+                  </div>
+                </div>
+                
+            </div>
+
+
+    <!-- </form> -->
+
+
+  </div>
+
+
+
+
+
+
+
 
 </div>

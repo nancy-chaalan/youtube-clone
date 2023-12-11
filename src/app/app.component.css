@@ -1,6 +1,6 @@
 
 
-.Headrs {
+.Headrs{
     position: sticky;
     top: 0; 
     left: 0; 
@@ -10,5 +10,9 @@
 
 
 .section {
-    /* margin-top: 112px; */
+     margin-top: 35px; 
 }
+
+/* .main-wrapper .navbar {
+    margin-top: -5px;
+} */

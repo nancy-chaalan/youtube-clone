@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Video } from '../Classes';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,11 @@ allVideos: any [] = [
   {id: 7, videoID:'472324', img:"assets/videos/img1.jpeg",title:"Spline and React - Full Course", channelName:"filtew", date:"12/1/2006", views:512,smallImg: 'assets/videos/profilePic/a.png', videoTime: '6:83', subscribers: 108, likes: 34},
   {id: 8, videoID:'472324', img:"assets/videos/img2.jpeg",title:"Hello 3D Site with Spline and React - Full Course", channelName:"sdcee", date:"17/1/2022", views:132,smallImg: 'assets/videos/profilePic/b.png', videoTime: '8:30', subscribers: 102834, likes: 140},
   {id: 9, videoID:'472324', img:"assets/videos/img3.png",title:"Create 3D Site with Spline and React - Full Course",  channelName:"chaneel L", date:"1/1/2013",  views:1332,smallImg:'assets/videos/profilePic/a.png', videoTime: '4:30', subscribers: 234, likes: 72},
+  {id: 10, videoID:"2X5g0nUojA4", img:"assets/videos/img10.png",title:"C3D Site with Spline and React - Full Course", channelName:"Channel", date:"12/1/2023", views:12,smallImg: 'assets/videos/profilePic/a.png', videoTime: '4:30', subscribers: 43, likes: 12},
+  {id: 11, videoID:"2X5g0nUojA4", img:"assets/videos/img11.jpeg",title:"C3D Site with Spline and React - Full Course", channelName:"Channel", date:"12/1/2023", views:12,smallImg: 'assets/videos/profilePic/a.png', videoTime: '4:30', subscribers: 43, likes: 12},
+  {id: 11, videoID:"2X5g0nUojA4", img:"assets/videos/img12.png",title:"C3D Site with Spline and React - Full Course", channelName:"Channel", date:"12/1/2023", views:12,smallImg: 'assets/videos/profilePic/a.png', videoTime: '4:30', subscribers: 43, likes: 12},
+  {id: 12, videoID:"2X5g0nUojA4", img:"assets/videos/img13.png",title:"C3D Site with Spline and React - Full Course", channelName:"Channel", date:"12/1/2023", views:12,smallImg: 'assets/videos/profilePic/a.png', videoTime: '4:30', subscribers: 43, likes: 12},
+ 
 ]
 
 
@@ -38,7 +44,9 @@ public GetVideoById(id:number){
   // return indexToFind;
 }
 
+public addVideo(medicine:Video){
 
+}
 
 
 

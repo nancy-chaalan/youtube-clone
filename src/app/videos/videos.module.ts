@@ -9,6 +9,7 @@ import { RightbarvideosComponent } from './rightbarvideos/rightbarvideos.compone
 import { ShowVideoComponent } from './show-video/show-video.component';
 import { AppModule } from '../app.module';
 import { AddvideoComponent } from './addvideo/addvideo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +26,7 @@ import { AddvideoComponent } from './addvideo/addvideo.component';
   CommonModule,    
   SharedModuleModule,
   VideosRoutingModule,
+  ReactiveFormsModule
   ],
 
   exports: [

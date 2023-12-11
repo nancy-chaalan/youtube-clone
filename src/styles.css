@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-
+body  {
+  background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
+}
 
 
 /* =========== Sidebar css =========== */
 .sidebar-nav-wrapper {
-    background: #fff;
+    /* background: #fff; */
     /* width: 250px; */
     padding: 20px 0px;
     height: 100vh;
@@ -84,14 +86,14 @@
   }
 
 
-  .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a.collapsed {
-    color: #9AA4CA;
-  }
+  /* .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a.collapsed {
+    color: #0037ff;
+  } */
 
-  .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a.collapsed::before {
+  /* .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a.collapsed::before {
     opacity: 0;
     visibility: hidden;
-  }
+  } */
 
 
   .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a.collapsed::after {

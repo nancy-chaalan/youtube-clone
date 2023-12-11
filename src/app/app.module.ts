@@ -9,6 +9,9 @@ import { LoadingModule } from './loading/loading.module';
 import { VideosModule } from './videos/videos.module';
 import { AuthModule } from './auth/auth.module';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,9 @@ import { AuthModule } from './auth/auth.module';
     AppRoutingModule,
     SharedModuleModule,
     LoadingModule,
-    AuthModule
+    AuthModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 
   exports:[

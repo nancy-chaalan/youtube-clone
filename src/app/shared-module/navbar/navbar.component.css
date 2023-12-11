@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+ 
    }
  
    
@@ -13,20 +14,16 @@
 
 
 .header {
- /* width: 100%;  */
     height: 56px;
     width: 100vw;
- /* top: 56px; */
- /* left: 248px;  */
-    background: radial-gradient(ellipse at bottom, #612778 0%, #2E335A 40%);
- /* overflow-x: scroll;
-    scroll-behavior: smooth;
-    overflow-y: hidden; 
-    overscroll-behavior: contain; */
-    /* border-bottom: #612778; */
-    /* border-style: solid; */
+    background: radial-gradient(ellipse at bottom, #612778 0%, #2E335A 60%);
+  
+overflow: hidden;
 
-}
+    position: fixed;
+    margin-top: 35px;
+    z-index: 1000;
+  }
 
   
 .navbar {
@@ -61,6 +58,7 @@
 .navbar li a:hover,   .navbar li a:focus,  .navbar li a:active {
   color: white;
   transform: scale(1.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 

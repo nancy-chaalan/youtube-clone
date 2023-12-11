@@ -1,85 +1,173 @@
 .container-fluid {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;   
-    background: linear-gradient(180deg, #2B2F53 0%, #1D1C34 34%);
- }
+  width: 100%;
+  height: 100%;
 
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
 
-* {
-    box-sizing: border-box;
+  background: linear-gradient(180deg, #2B2F53 0%, #1D1C34 34%);
 }
 
-/* Add this to your component's CSS or in styles.css */
-.custom-margin {
-  margin-right: 5px; /* Adjust the value as needed */
+* { box-sizing: border-box; }
+
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-column-gap: 16px;
+  grid-row-gap: 30px;
+  margin-top: 15px;
+  cursor: pointer;
 }
 
 
-#mainRow {
-    margin: 0 -15px; /* Adjust negative margin for proper spacing */
-  }
+.div-list{
+  background: linear-gradient(180deg, rgba(89, 65, 175, 0.2) 0%, rgba(72, 49, 157, 0) 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(44, 0, 166, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.div-list .thumbnail {
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  object-fit: cover;
+  background:  rgba(72, 49, 157, 0.20);
+} 
+
+
+.div-list .flex-div {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 7px;
+
+}
+
+
+.flex-div .col1 {
+  margin-left: 10px;
+  flex: 1;
+}
+
+
+.flex-div .col2 {
+  flex: 6;
+}
+
+
+.div-list .flex-div a{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+
+.div-list .flex-div p{
+  color: rgb(149, 145, 145); 
+}
+
+
+.div-list .flex-div img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  background:  rgba(72, 49, 157, 0.20);
+}
   
-  .card {
-    width: 100%;
-    max-width: 300px; 
-    margin: 15px;
-    background: linear-gradient(180deg, rgba(72, 49, 157, 0.20) 0%, rgba(72, 49, 157, 0) 100%);
-    border-radius: 16px;
-    box-shadow:0 4px 20px rgba(44, 0, 166, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
   
+.vid-info p{
+  border-style: none; 
+  position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+  background: rgba(72, 49, 157, 0.20);
+  border-radius: 20px;
+  padding: 10px;
+  overflow: hidden; /* Hide overflow from shimmer effect */
+}
 
 
-
-  
- .card-text {
-    background:  rgba(72, 49, 157, 0.20);
-    /* border-style: solid; */
-    /* border-color: rgba(72, 49, 157, 0.20); */
-    border-radius: 20px;
-
- }
-
-
-
-  .card-img-top {
-    cursor: pointer;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    background:  rgba(72, 49, 157, 0.20)
-  }
-
-
-
-
-  
-#bodyOftheCard {
+.flex-div {
     padding: 10px;
   }
 
 
-#bodyOftheCard #col1 {
+.flex-div #col1 {
 align-items: center;
 } 
 
 
 
-.col #SvgInCard {
-    flex: 1;
-    width: 40px;
-    height: 35px;
-    border-radius: 50%;
-    object-fit: cover;
-    background:  rgba(72, 49, 157, 0.20);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
   }
-  
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.shimmer-effect {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::before {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.21), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+
+
+
+
+
+.vid-info p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.326), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+
+
 
 
