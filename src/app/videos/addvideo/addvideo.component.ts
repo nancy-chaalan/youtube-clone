@@ -77,20 +77,25 @@ onFileChange(event: any): void {
     if (file) {
       const maxSizeWidth = 1920;
       const maxSizeHeight = 1080;
+      const targetRatio = 0.56;
+
+
 
       // Create an image element to get the natural dimensions
       const img = new Image();
-
+  
       img.onload = () => {
 
-        if (img.width > maxSizeWidth || img.height > maxSizeHeight) {
-          // alert('The selected image dimensions are too large. Please choose an image with dimensions less than 16:9 ratio.');
-         this.showAlert=true;
-          // Clear the input field to allow the user to choose a different image
+        const imgRatioNb = img.height / img.width;
+        const imgRatio = Math.floor(imgRatioNb*100)/100;
+  
+        console.log(imgRatio)
+
+        if (img.width > maxSizeWidth || img.height > maxSizeHeight || img.width > 350 && img.height < 200  ||  img.width < 100 && img.height > 300) {
+          this.showAlert=true;
           fileInput.value = '';
           this.selectedImage = '../assets/selected.jpg';
         } 
-
 
         
         else {
@@ -99,35 +104,69 @@ onFileChange(event: any): void {
 
           const canvas = document.createElement('canvas');
           const context = canvas.getContext('2d');
-  
+
           if (!context) {
             console.error('Unable to get 2D rendering context.');
             return;
           }
   
-          // Set canvas dimensions to maintain specified width and height
+          // Set canvas dimensions to the specified maximum width and height
           canvas.width = maxSizeWidth;
           canvas.height = maxSizeHeight;
-  
-          // Calculate the position to center the image
-          const offsetX = (maxSizeWidth - img.width) / 2;
-          const offsetY = (maxSizeHeight - img.height) / 2;
-  
-          // Draw the image on the canvas with black background
-          context.fillStyle = 'black';
-          context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
-          context.drawImage(img, offsetX, offsetY);
-  
-          // Convert canvas content to data URL and set as selectedImage
-          this.selectedImage = canvas.toDataURL('image/png');
+    
+          // Check if the image ratio matches the target ratio
+    if (imgRatio === targetRatio) {
+            context.drawImage(img, 0, 0, maxSizeWidth, maxSizeHeight);
+            this.selectedImage = canvas.toDataURL('image/png');
+      } 
+          
 
-        }
-      };
 
+else {
+
+      if(img.width > img.height) {
+
+        this.selectedImage = canvas.toDataURL('image/png');
+
+        const drawHeight = img.height*2;
+        const offsetY = (maxSizeHeight - drawHeight) / 2;
+ 
+        context.fillStyle = 'black';
+        context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
+ 
+        context.drawImage(img, 0, offsetY, maxSizeWidth, img.height*2);
+         this.selectedImage = canvas.toDataURL('image/png');
+       } 
+
+
+    else {
+
+           this.selectedImage = canvas.toDataURL('image/png');
+            const drawWidth = img.width*2;
+            const offsetx = (maxSizeWidth - drawWidth) / 2;
+    
+            // Fill the canvas with a black background
+            context.fillStyle = 'black';
+            context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
+    
+            // Draw the image on the canvas with the calculated offset
+            context.drawImage(img, offsetx, 0, img.width*2, maxSizeHeight);
+            this.selectedImage = canvas.toDataURL('image/png');
+    }
+
+
+           
+          }  } };
+  
       // Set the source of the image element to the selected file
       img.src = URL.createObjectURL(file);
     }
-}
+  }
+  
+       
+
+
+
 
 vid : Video = new Video();
 

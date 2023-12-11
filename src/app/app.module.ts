@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { SharedModuleModule } from './shared-module/shared-module.module';
 import { HomeComponent } from './home/home.component';
 import { LoadingModule } from './loading/loading.module';
-import { VideosModule } from './videos/videos.module';
 import { AuthModule } from './auth/auth.module';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
