@@ -10,18 +10,21 @@
 
 
 
-
 /* the whole container */
 .header {
   justify-content: space-between;
   display: flex;
-  width: 100%;
-  height: 56px;
+  /* width: 100%;
+  height: 56px; */
   /* background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%);  */
   background: #2E335A;
-  /* position: fixed; */
 
-  
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  z-index: 1000;
+
 }
 
 
@@ -60,14 +63,18 @@ svg {
 }
 
 
+#contactInfo {
+  border-radius: 50%;
+  border-style: none;
+  background: RGB(111, 12, 122, 0.5);
+  color: white;
+  padding: 4px 9px;
+}
 
 
-
-
-
-
-
-
+#contactInfo:hover {
+  background: RGB(111, 12, 122);
+}
 
 
 
@@ -161,6 +168,7 @@ input[type="text"] {
 
 
 
+
 /* responsive css */
 
 @media only screen and (max-width:929px) {
@@ -182,4 +190,137 @@ input[type="text"] {
 .search { display: none;  }
 .searchIcon { display: block; }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+ 
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
+
+
+
+
+
+/* Modal */
+
+.modal .btn {
+  background: #2E335A;
+  color: white;
+ 
+}
+
+.modal .btn:hover {
+  background: #4b2e5a;
+  animation: pulse 1s infinite;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+.modal div div{
+  background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
+
+}
+
+
+.modal div div .modal-body .card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+   background: #525573;
+  /* max-width: 300px; */
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.modal div div .modal-body .card .title {
+  color: grey;
+  font-size: 18px;
+  align-items: center;
+}
+
+.modal div div div .modal-title {
+  color: white;
+}
+
+
+.modal div div div .btn-close {
+    color: white;
+}
+
+.modal div div div .btn-close:hover {
+  color: rgb(255, 0, 0);
+}
+
+
+
+
+.modal div div .modal-body2 {
+  background: #525573;
+  width: 100%;
+  padding: 5px;
+}
+
+
+
+/* Full-width input fields */
+.modal div div .modal-body2 input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.modal div div .modal-body2 input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
 }

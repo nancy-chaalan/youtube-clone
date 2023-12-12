@@ -1,3 +1,5 @@
+
+
 .divider {
     position: relative;
     height: 4px;
@@ -5,7 +7,7 @@
     background: linear-gradient(to right, #800080, #4B0082);
   }
 
-  .divider:before {
+.divider:before {
     content: "";
     position: absolute;
     top: 0;
@@ -16,17 +18,17 @@
     background-size: 200% 200%;
     animation: gradientAnimation 3s ease infinite;
     border-radius: 5px;
-  }
+ }
 
-  @keyframes gradientAnimation {
+
+@keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;
     }
     100% {
       background-position: 200% 50%;
     }
-  }
-
+ }
 
 
 .shorts {

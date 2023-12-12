@@ -1,18 +1,13 @@
-<app-shimmer *ngIf="done"></app-shimmer>
+<!-- <app-shimmer *ngIf="done"></app-shimmer> -->
 
 
 <div *ngIf="!done" class="container-fluid">
-
-
-        <div class="list-container">
-
-          <div class="div-list" *ngFor="let vid of allVideos; let i = index" (click)="moveToRouteWithIndex('/videos/view', vid.id)">
-
+  <div class="list-container">
+    <div class="div-list" *ngFor="let vid of allVideos; let i = index" (click)="moveToRouteWithIndex('/videos/view', vid.id)">
             <div class="image-container">
                   <img class="thumbnail" [src]="vid.img" (click)="moveToRouteWithIndex('/videos/view',vid.id)">
                   <div class="bottom-right">{{vid.videoTime}}</div> 
             </div>
-
                 <div class="flex-div">
 
                   <div class="col col1">
@@ -25,13 +20,10 @@
                     <p>{{ vid.channelName }}</p>
                     <p>{{ vid.views }} views ● {{ vid.date }}</p>
                   </div>
-                </div>
- 
-                  </div>
-                </div>
-                
-              </div>
-
+          </div>
+        </div>
+     </div>            
+  </div>
 </div> 
 
 

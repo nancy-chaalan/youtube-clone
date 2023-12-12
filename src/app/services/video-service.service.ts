@@ -80,12 +80,11 @@ resizeImages(): void {
       canvas.height = maxSizeHeight;
 
       // Check if the image ratio matches the target ratio
-      if (imgRatio === targetRatio) {
+  if (imgRatio === targetRatio) {
         context.drawImage(img, 0, 0, maxSizeWidth, maxSizeHeight);
       } 
       
-      else {
-
+  else {
         // Choose between stretching to width or height based on the original dimensions
         const drawWidth = img.width > img.height ? maxSizeWidth : img.width;
         const drawHeight = img.width > img.height ? img.height : maxSizeHeight;

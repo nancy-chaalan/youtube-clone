@@ -91,7 +91,11 @@ onFileChange(event: any): void {
   
         console.log(imgRatio)
 
-        if (img.width > maxSizeWidth || img.height > maxSizeHeight || img.width > 350 && img.height < 200  ||  img.width < 100 && img.height > 300) {
+        if (    img.width > maxSizeWidth
+             || img.height > maxSizeHeight 
+             || img.width < 250
+             || img.height < 250  ) {
+
           this.showAlert=true;
           fileInput.value = '';
           this.selectedImage = '../assets/selected.jpg';
@@ -128,13 +132,13 @@ else {
 
         this.selectedImage = canvas.toDataURL('image/png');
 
-        const drawHeight = img.height*2;
+        const drawHeight = img.height;
         const offsetY = (maxSizeHeight - drawHeight) / 2;
  
         context.fillStyle = 'black';
         context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
  
-        context.drawImage(img, 0, offsetY, maxSizeWidth, img.height*2);
+        context.drawImage(img, 0, offsetY, maxSizeWidth, img.height);
          this.selectedImage = canvas.toDataURL('image/png');
        } 
 
@@ -142,7 +146,7 @@ else {
     else {
 
            this.selectedImage = canvas.toDataURL('image/png');
-            const drawWidth = img.width*2;
+            const drawWidth = img.width;
             const offsetx = (maxSizeWidth - drawWidth) / 2;
     
             // Fill the canvas with a black background
@@ -150,7 +154,7 @@ else {
             context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
     
             // Draw the image on the canvas with the calculated offset
-            context.drawImage(img, offsetx, 0, img.width*2, maxSizeHeight);
+            context.drawImage(img, offsetx, 0, img.width, maxSizeHeight);
             this.selectedImage = canvas.toDataURL('image/png');
     }
 

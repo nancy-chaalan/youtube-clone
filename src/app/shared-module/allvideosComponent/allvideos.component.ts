@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VideoServiceService } from 'src/app/services/video-service.service';
 
-declare const require: any;
-const Crop = require('tinycrop');
+// declare const require: any;
+// const Crop = require('tinycrop');
 
 @Component({
   selector: 'app-allvideos',
@@ -29,7 +29,7 @@ moveToRouteWithIndex(route:string, id:number){
 ngOnInit(): void {
   // this.resizeImages();
   //  this.service.resizeImages();
-  setTimeout(() => {  this.done = false }, 3000);
+  setTimeout(() => {  this.done = false }, 1000);
   // this.resizeImages();
   this.allVideos = this.service.allVideos;
 
