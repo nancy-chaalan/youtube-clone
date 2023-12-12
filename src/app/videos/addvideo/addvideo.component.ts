@@ -79,98 +79,68 @@ onFileChange(event: any): void {
       const maxSizeHeight = 1080;
       const targetRatio = 0.56;
 
-
-
-      // Create an image element to get the natural dimensions
+   // Create an image element to get the natural dimensions
       const img = new Image();
   
       img.onload = () => {
-
-        const imgRatioNb = img.height / img.width;
-        const imgRatio = Math.floor(imgRatioNb*100)/100;
   
-        console.log(imgRatio)
-
-        if (    img.width > maxSizeWidth
-             || img.height > maxSizeHeight 
-             || img.width < 250
-             || img.height < 250  ) {
-
-          this.showAlert=true;
-          fileInput.value = '';
-          this.selectedImage = './assets/selected.jpg';
-
-        } 
-
+        const imgRatio = img.height / img.width;
+  
         
-        else {
-          
-          this.showAlert=false;
-
-          const canvas = document.createElement('canvas');
-          const context = canvas.getContext('2d');
-
-          if (!context) {
-            console.error('Unable to get 2D rendering context.');
-            return;
-          }
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
   
-          // Set canvas dimensions to the specified maximum width and height
-          canvas.width = maxSizeWidth;
-          canvas.height = maxSizeHeight;
-    
-          // Check if the image ratio matches the target ratio
-    if (imgRatio === targetRatio) {
-            context.drawImage(img, 0, 0, maxSizeWidth, maxSizeHeight);
-            this.selectedImage = canvas.toDataURL('image/png');
+     
+        if (!context) {
+          console.error('Unable to get 2D rendering context.');
+          return;
+        }
+  
+        // Set canvas dimensions to the specified maximum width and height
+        canvas.width = maxSizeWidth;
+        canvas.height = maxSizeHeight;
+  
+        // Check if the image ratio matches the target ratio
+  
+  // If the image's height-to-width ratio is very close to the target ratio (0.56), we can use it as is.
+  // If not, we need to resize the image to fit it within the canvas.
+      if (Math.abs(imgRatio - targetRatio) < 0.01) {
+          context.drawImage(img, 0, 0, maxSizeWidth, maxSizeHeight);
+          this.selectedImage = canvas.toDataURL('image/png');
       } 
-          
-
-
-else {
-
-      if(img.width > img.height) {
-
-        this.selectedImage = canvas.toDataURL('image/png');
-
-        const drawHeight = img.height;
-        const offsetY = (maxSizeHeight - drawHeight) / 2;
- 
-        context.fillStyle = 'black';
-        context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
- 
-        context.drawImage(img, 0, offsetY, maxSizeWidth, img.height);
-         this.selectedImage = canvas.toDataURL('image/png');
-       } 
-
-
-    else {
-
-           this.selectedImage = canvas.toDataURL('image/png');
-            const drawWidth = img.width;
-            const offsetx = (maxSizeWidth - drawWidth) / 2;
-    
-            // Fill the canvas with a black background
-            context.fillStyle = 'black';
-            context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
-    
-            // Draw the image on the canvas with the calculated offset
-            context.drawImage(img, offsetx, 0, img.width, maxSizeHeight);
-            this.selectedImage = canvas.toDataURL('image/png');
+        
+  
+      else {
+  
+        //Calculate a scaling factor (scaleFactor) that ensures the entire image fits within the canvas.
+        // scaleFactor to calculate the scale needed to fit the entire image within the canvas. 
+        const scaleFactor = Math.min(maxSizeWidth / img.width, maxSizeHeight / img.height);
+  
+        // The drawWidth and drawHeight are then calculated based on this scale, and the image is drawn accordingly.
+        //  This should ensure that the entire image fits within the canvas without cropping. 
+        // Adjust the targetRatio value as needed.   
+        //Determine the dimensions (drawWidth and drawHeight) of the resized image based on this scaling factor.
+          const drawWidth = img.width * scaleFactor;
+          const drawHeight = img.height * scaleFactor;
+  
+  
+          //Calculate the offsets (offsetX and offsetY) to center the resized image within the canvas.
+          const offsetX = (maxSizeWidth - drawWidth) / 2;
+          const offsetY = (maxSizeHeight - drawHeight) / 2;
+  
+          context.fillStyle = 'black';
+          context.fillRect(0, 0, maxSizeWidth, maxSizeHeight);
+  
+          context.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+          this.selectedImage = canvas.toDataURL('image/png');
+        }
     }
-
-
-           
-          }  } };
   
       // Set the source of the image element to the selected file
       img.src = URL.createObjectURL(file);
     }
   }
   
-       
-
-
 
 
 vid : Video = new Video();

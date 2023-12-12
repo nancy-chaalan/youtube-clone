@@ -79,22 +79,30 @@ resizeImages(): void {
       canvas.height = maxSizeHeight;
 
       // Check if the image ratio matches the target ratio
+
+// If the image's height-to-width ratio is very close to the target ratio (0.56), we can use it as is.
+// If not, we need to resize the image to fit it within the canvas.
     if (Math.abs(imgRatio - targetRatio) < 0.01) {
         context.drawImage(img, 0, 0, maxSizeWidth, maxSizeHeight);
     } 
       
 
+
     else {
 
+      //Calculate a scaling factor (scaleFactor) that ensures the entire image fits within the canvas.
       // scaleFactor to calculate the scale needed to fit the entire image within the canvas. 
-        const scaleFactor = Math.min(maxSizeWidth / img.width, maxSizeHeight / img.height);
+      const scaleFactor = Math.min(maxSizeWidth / img.width, maxSizeHeight / img.height);
 
-         // The drawWidth and drawHeight are then calculated based on this scale, and the image is drawn accordingly.
-         //  This should ensure that the entire image fits within the canvas without cropping. 
+      // The drawWidth and drawHeight are then calculated based on this scale, and the image is drawn accordingly.
+      //  This should ensure that the entire image fits within the canvas without cropping. 
       // Adjust the targetRatio value as needed.   
+      //Determine the dimensions (drawWidth and drawHeight) of the resized image based on this scaling factor.
         const drawWidth = img.width * scaleFactor;
         const drawHeight = img.height * scaleFactor;
 
+
+        //Calculate the offsets (offsetX and offsetY) to center the resized image within the canvas.
         const offsetX = (maxSizeWidth - drawWidth) / 2;
         const offsetY = (maxSizeHeight - drawHeight) / 2;
 
