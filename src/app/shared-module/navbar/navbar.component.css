@@ -8,7 +8,7 @@
    }
  
    
-  * {
+* {
     box-sizing: border-box;
   }
 
@@ -18,7 +18,7 @@
     width: 100vw;
     background: radial-gradient(ellipse at bottom, #612778 0%, #2E335A 60%);
   
-overflow: hidden;
+    overflow: hidden;
 
     position: fixed;
     margin-top: 150px;
@@ -82,7 +82,3 @@ overflow: hidden;
 
 
 
-
-
-
-  

@@ -42,7 +42,7 @@ handleThumbsUpClick() {
     // this.thumbsUpCount += this.isThumbsUpClicked ? 1 : -1;
   }
 
-  handleThumbsDownClick() {
+handleThumbsDownClick() {
     this.isThumbsDownClicked = !this.isThumbsDownClicked;
     // this.thumbsUpCount += this.isThumbsUpClicked ? 1 : -1;
   }

@@ -98,7 +98,8 @@ onFileChange(event: any): void {
 
           this.showAlert=true;
           fileInput.value = '';
-          this.selectedImage = '../assets/selected.jpg';
+          this.selectedImage = './assets/selected.jpg';
+
         } 
 
         
