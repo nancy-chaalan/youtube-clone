@@ -31,8 +31,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     /* background-color: #cfcece; */
-    background-color: rgba(231, 222, 228, 0.338);
-    margin-top: 90px;
+    background: linear-gradient(180deg, rgba(86, 89, 111, 0) 0%, rgba(72, 70, 122, 0.34) 54%);
+        
+    margin-top: 100px;
 
 }
 
@@ -59,23 +60,15 @@ form {
   box-sizing: border-box;
 }
   
-#videoFile{
+#videoFile, #imageFile{
     padding: 10px;
     margin-top: 5px;
     border-radius: 4px;
     width: 100%;
     color: whitesmoke;
-    background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
-}
-  
-#imageFile{
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 4px;
-    width: 100%;
-    color: whitesmoke;
-    background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
-}
+    background: #9668f155; 
+  cursor: pointer;
+  }
 
 textarea {
     padding: 10px;
@@ -90,7 +83,7 @@ button {
   margin-top: 5px;
   border-radius: 4px;
   width: 100%;
-  background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%);
+  background: #9668f166;
   color: #fff;
   cursor: pointer;
   border-style: none;
@@ -105,7 +98,7 @@ button:hover {
 
 
 h1 {
-  color: rgb(108, 6, 108);
+  color: rgb(218, 218, 218);
   font-family:Georgia, 'Times New Roman', Times, serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

@@ -26,7 +26,7 @@ export class AddvideoComponent implements OnInit {
 
   currentDate: Date = new Date();
 
-  selectedImage: string = '../assets/selected.jpg'; 
+  selectedImage: string = './assets/selected.jpg'; 
   // To store the selected image data URL
 
   showProgressBar:boolean = false;
@@ -117,9 +117,9 @@ onFileChange(event: any): void {
         const scaleFactor = Math.min(maxSizeWidth / img.width, maxSizeHeight / img.height);
   
         // The drawWidth and drawHeight are then calculated based on this scale, and the image is drawn accordingly.
-        //  This should ensure that the entire image fits within the canvas without cropping. 
+        // This should ensure that the entire image fits within the canvas without cropping. 
         // Adjust the targetRatio value as needed.   
-        //Determine the dimensions (drawWidth and drawHeight) of the resized image based on this scaling factor.
+        // Determine the dimensions (drawWidth and drawHeight) of the resized image based on this scaling factor.
           const drawWidth = img.width * scaleFactor;
           const drawHeight = img.height * scaleFactor;
   

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body  {
   background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
+  /* background: #000; */
 }
 
 
@@ -31,7 +32,7 @@ body  {
 
   
 
-  @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
     .sidebar-nav-wrapper {
       -webkit-transform: translateX(-260px);
       -moz-transform: translateX(-260px);

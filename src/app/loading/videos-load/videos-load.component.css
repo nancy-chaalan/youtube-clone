@@ -17,7 +17,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-column-gap: 16px;
   grid-row-gap: 30px;
-  margin-top: 15px;
+  margin-top: 100px;
   cursor: pointer;
 }
 

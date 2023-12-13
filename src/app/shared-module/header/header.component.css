@@ -14,9 +14,6 @@
 .header {
   justify-content: space-between;
   display: flex;
-  /* width: 100%;
-  height: 56px; */
-  /* background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%);  */
   background: #2E335A;
 
   position: fixed; 
@@ -26,8 +23,6 @@
   z-index: 1000;
 
 }
-
-
 
 
 
@@ -61,7 +56,6 @@ svg {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out; /* Transition for smooth color change */
 }
-
 
 #contactInfo {
   border-radius: 50%;
@@ -112,10 +106,6 @@ input[type="text"] {
   
 
 
-  
-
-
-
 
 
 
@@ -154,9 +144,9 @@ input[type="text"] {
   transform: scale(1.2);
 }
 
-#menu-toggle.clicked {
-  transform: rotate(-180deg);
-}
+/* #menu-toggle.clicked {
+  transform: rotate(-360deg);
+} */
 
 
 

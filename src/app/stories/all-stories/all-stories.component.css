@@ -18,13 +18,13 @@
 */
 
 
+
 :host {
     display: flex;
     align-items: center;
     justify-content: center;
     height: calc(100vh - 150px); /* Set the component height to the full viewport height with a margin */
-    overflow: hidden; /* Enable vertical scrolling only for .slider-container */
-    margin: 110px 0 40px; /* Set the margin from the top (110px), no margin for left and right, and from the bottom (40px) */
+    /* overflow-y: hidden;  */
   }
 
   
@@ -44,7 +44,6 @@
     scroll-snap-align: start;
     position: relative;
     height: calc(100vh - 150px); 
-    
   }
 
   
@@ -54,6 +53,7 @@
     height: 100%; /* Set the height of each image to the full viewport height */
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
   }
+  
   
 .title {
     position: absolute;

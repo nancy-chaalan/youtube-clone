@@ -60,7 +60,6 @@ ngOnInit(): void {
 
 getVidByID(id : number){
   this.viewedVideo = this.service.GetVideoById(id);
-  // console.log(this.viewedVideo.videoID);
   this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+this.viewedVideo.videoID);
 }
 
