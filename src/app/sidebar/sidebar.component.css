@@ -194,3 +194,6 @@ h6 {
 
 
 
+@media only screen and (max-width: 1200px) {
+  .sidebar-nav-wrapper { margin-top: 100px; }
+}

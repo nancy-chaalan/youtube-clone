@@ -3,15 +3,16 @@
     <!-- Main Content -->
     <!-- <div class="container"> -->
 
-      <!-- Video -->
-      <div id="video-container">
-              <iframe width="100%" height="600px" controls="controls"
-              [src]= "videoUrl"               
-              frameborder="0"
-              allowfullscreen >
-            </iframe>
-      </div>
-
+<!-- Video -->
+<div id="video-container">
+  <iframe
+    width="100%"
+    height="100%"
+    [src]="videoUrl"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+</div>
 
       <!-- Video Information -->
       <div id="video-info">
@@ -34,72 +35,36 @@
         </span>
      
          
-        <button class="SubsrcibeButton"> Subsrcibe </button>
+        <!-- <button class="SubsrcibeButton"> Subsrcibe </button> -->
 
           </div> 
 
           
 
-<div id="likeSave" class="col">
-           
-              <!-- <button type="button" class="btn btn-outline-primary mr-3"><i class="fas fa-thumbs-up"></i> Like</button> -->
-
-             
-   
-                <button type="button" class="btn btn-outline-success"> Save </button>
-
-                <div class="like">
-                        <i  [class.clicked]="isThumbsUpClicked"
-                          (click)="handleThumbsUpClick()"
-                          class="fa fa-thumbs-up">
-                      </i>
-                      <span class="thumbs-up-count">{{viewedVideo.likes}} Like</span>  
+          <div id="likeSave" class="col">
+            <div class="like">
+              <i [class.clicked]="isThumbsUpClicked" (click)="handleThumbsUpClick()" class="fa fa-thumbs-up"></i>
+              <span class="thumbs-up-count">{{viewedVideo.likes}} Like</span>
             </div>
-
+          
+            <div class="divider"></div> <!-- Vertical divider -->
+          
             <div class="dislike">
-              <i  [class.clicked]="isThumbsUpClicked"
-                (click)="handleThumbsDownClick()"
-                class="fa fa-thumbs-down">
-            </i>
-            <!-- <span class="thumbs-up-count">12 Likes </span>   -->
-        </div>
-       
-
-
-</div>
-       
+              <i [class.clicked]="isThumbsUpClicked" (click)="handleThumbsDownClick()" class="fa fa-thumbs-down"></i>
+            </div>
+          </div>
+          
 
 
 
 
 
-<div id="likeSave" class="col">
-  <!-- <div class="mb-3"> -->
-  
-    <!-- <button type="button" class="btn btn-outline-primary mr-3"><i class="fas fa-thumbs-up"></i> Like</button> -->
+<div id="download" class="col">
 
-    <!-- <div class="thumbs-up-container"> -->
-
-      <button type="button" class="btn btn-outline-success"> Save </button>
-
-      <div class="like">
-              <i  [class.clicked]="isThumbsUpClicked"
-                (click)="handleThumbsUpClick()"
-                class="fa fa-thumbs-up">
-            </i>
-            <span class="thumbs-up-count">{{viewedVideo.likes}} Like</span>  
-  </div>
-
-  <div class="dislike">
-    <i  [class.clicked]="isThumbsUpClicked"
-      (click)="handleThumbsDownClick()"
-      class="fa fa-thumbs-down">
-  </i>
-  
-  <!-- <span class="thumbs-up-count">12 Likes </span>   -->
-</div>
-    <!-- </div> -->
-
+      <button type="button" class="btn2"> Share ⇗</button>
+      <button type="button" class="btn2"> Download </button>
+      <button type="button" class="btn2"> Save 📥</button>
+      <button type="button" class="btn2"> Subsrcibe ➲</button>
 
 </div>
 

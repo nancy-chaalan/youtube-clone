@@ -1,28 +1,18 @@
-
-    <!-- sidebar links -->
-    <div id="sidebar" >       
-    
-        <a class="wholeBox" *ngFor="let vid of alllvideos">
-          
-         <!-- <div class="container"> -->
-
-            <div class="row">
-
-                <!-- Use responsive classes to adjust the layout based on screen size -->
-                <div id="imgDiv" class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <img (click)="moveToRouteWithIndex('videos/view',vid.id)" src="{{vid.img}}" alt="">
-                    <div class="bottom-right">{{vid.videoTime}}</div>
-                </div>
-
-                <div id="texts" class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
-                    <a (click)="moveToRouteWithIndex('view',vid.id)">{{vid.title}}</a>
-                    <p>{{vid.channelName}} - {{vid.views}} views</p>
-                </div>
-
-            </div>
-
-        <!-- </div> -->
-
-        </a>
-
-    </div>
+<!-- sidebar links -->
+<div id="sidebar">
+    <a class="wholeBox" *ngFor="let vid of alllvideos">
+      <div class="row">
+        <!-- Use responsive classes to adjust the layout based on screen size -->
+        <div id="imgDiv" class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <img (click)="moveToRouteWithIndex('videos/view', vid.id)" src="{{ vid.img }}" alt="">
+          <div class="bottom-right">{{ vid.videoTime }}</div>
+        </div>
+  
+        <div id="texts" class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
+          <a (click)="moveToRouteWithIndex('videos/view', vid.id)">{{ vid.title }}</a>
+          <p>{{ vid.channelName }} - {{ vid.views }} views</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  
