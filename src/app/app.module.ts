@@ -10,6 +10,15 @@ import { AuthModule } from './auth/auth.module';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
+
 
 @NgModule({
   declarations: [
@@ -25,10 +34,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+         loader: {
+             provide: TranslateLoader,
+             useFactory: HttpLoaderFactory,
+             deps: [HttpClient]
+         }
+     })
   ],
 
   exports:[
-    
+    TranslateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

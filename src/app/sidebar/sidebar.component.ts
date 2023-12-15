@@ -12,6 +12,22 @@ export class SidebarComponent {
 
   }
 
+  language : any;
+
+  ngOnChanges(): void {
+   this.language = localStorage.getItem('lang');
+   console.log("on changes"+ this.language)
+  }
+
+  
+isArabic(): boolean {
+    if (localStorage.getItem('lang') == 'ar')
+        return true;
+     else
+       return false;
+ }
+ 
+
     // function for routing
 moveToRoute(route:string){
   this.router.navigate([route]).then(() => {window.scrollTo(0, 0)});

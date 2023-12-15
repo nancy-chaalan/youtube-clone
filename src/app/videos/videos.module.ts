@@ -10,6 +10,7 @@ import { ShowVideoComponent } from './show-video/show-video.component';
 import { AppModule } from '../app.module';
 import { AddvideoComponent } from './addvideo/addvideo.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   CommonModule,    
   SharedModuleModule,
   VideosRoutingModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  TranslateModule
   ],
 
   exports: [

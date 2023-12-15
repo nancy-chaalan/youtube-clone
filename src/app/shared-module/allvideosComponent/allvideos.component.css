@@ -10,6 +10,7 @@
   background: linear-gradient(180deg, #2B2F53 0%, #1D1C34 34%);
 }
 
+
 * { box-sizing: border-box; }
 
 
@@ -23,7 +24,9 @@
   cursor: pointer;
 }
 
-
+.arabic {
+  direction: rtl;
+}
 
 
 .div-list{
@@ -32,6 +35,7 @@
   box-shadow: 0 4px 20px rgba(44, 0, 166, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 
 .div-list:hover {
   transform: scale(1.03);

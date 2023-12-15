@@ -7,8 +7,6 @@ body  {
 
 /* =========== Sidebar css =========== */
 .sidebar-nav-wrapper {
-    /* background: #fff; */
-    /* width: 250px; */
     padding: 20px 0px;
     height: 100vh;
     position: fixed;
@@ -30,6 +28,32 @@ body  {
     transform: translateX(0);
   }
 
+
+/* .arabicSideBar { */
+    /* direction: rtl; */
+    /* right: 0; */
+    /* left: auto;
+
+    padding: 20px 0px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0px 0px 30px 0px rgba(200, 208, 216, 0.3);
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  } */
+
   
 
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -40,6 +64,7 @@ body  {
       -o-transform: translateX(-260px);
       transform: translateX(-260px);
     }
+
   }
 
 
@@ -182,32 +207,30 @@ body  {
   }
 
 
-  @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
     .main-wrapper {
       margin-left: 0;
     }
   }
 
-
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .main-wrapper {
       padding-bottom: 110px;
     }
   }
 
 
-  .main-wrapper.active {
+.main-wrapper.active {
     margin-left: 0;
   }
 
 
-  .main-wrapper .container-fluid {
+.main-wrapper .container-fluid {
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .main-wrapper .container-fluid {
       padding-left: 20px;
       padding-right: 20px;
@@ -215,16 +238,13 @@ body  {
   }
 
 
-  .main-wrapper .footer {
+.main-wrapper .footer {
     padding: 25px 0;
     justify-items: flex-end;
     position: absolute;
     bottom: 0;
     width: 100%;
   }
-
- 
-
 
 @media (max-width: 767px) {
     .main-wrapper .footer .terms {

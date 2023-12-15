@@ -2,7 +2,8 @@
 
 
 <div *ngIf="!done" class="container-fluid">
-  <div class="list-container">
+
+  <div class="list-container" [ngClass]="{'list-container': true, 'arabic': isArabic()}">
     <div class="div-list" *ngFor="let vid of editedArray; let i = index" (click)="moveToRouteWithIndex('/videos/view', vid.id)">
             <div class="image-container">
                   <img class="thumbnail" [src]="vid.img" (click)="moveToRouteWithIndex('/videos/view',vid.id)">

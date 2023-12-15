@@ -17,6 +17,7 @@
 }
   
 
+
 * { 
     box-sizing: border-box;
 }
@@ -30,17 +31,16 @@
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    /* background-color: #cfcece; */
     background: linear-gradient(180deg, rgba(86, 89, 111, 0) 0%, rgba(72, 70, 122, 0.34) 54%);
-        
     margin-top: 100px;
-
 }
+
 
 .cont2 {
       max-width: 550px; 
 }  
   
+
 form {
     display: flex;
     flex-direction: column;

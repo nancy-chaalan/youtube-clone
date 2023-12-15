@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Video } from 'src/app/Classes';
@@ -13,7 +13,7 @@ const Crop = require('tinycrop');
   styleUrls: ['./addvideo.component.css']
 })
 
-export class AddvideoComponent implements OnInit {
+export class AddvideoComponent implements OnInit,OnChanges {
 
   myForm: FormGroup;
 
@@ -53,6 +53,24 @@ constructor(private fb: UntypedFormBuilder, private service: VideoServiceService
     });
 
 }
+
+
+language : any;
+
+ngOnChanges(): void {
+ this.language = localStorage.getItem('lang');
+ console.log("on changes"+ this.language)
+}
+
+
+isArabic(): boolean {
+
+  if (localStorage.getItem('lang') == 'ar')
+      return true;
+   else
+     return false;
+      
+   }
 
 
 onFieldChange(fieldName: string, value: string) {

@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   done:boolean = true;
   
+
   constructor() {
     setTimeout(() => {  this.done = false },1500);
   }
   
+
+ 
+
 }

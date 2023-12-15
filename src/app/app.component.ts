@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'youtube';
+  lang : any;
 
-  constructor(){
-    localStorage.setItem("showSideBarBtn", "yes");
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'ar']);
+
+    if(localStorage.getItem('lang') == null)
+        localStorage.setItem('lang',"en");
   }
+
+
+
+  
 }

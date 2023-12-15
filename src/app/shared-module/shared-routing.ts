@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AllvideosComponent } from './allvideosComponent/allvideos.component';
 import { StoriesComponentComponent } from './stories-component/stories-component.component';
 import { EverythingComponent } from './everything/everything.component';
 import { HeaderComponent } from './header/header.component';

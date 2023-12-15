@@ -1,0 +1,48 @@
+{
+
+  "NAVBAR": {
+    "nav1": "All",
+    "nav2": "Mixes",
+    "nav3": "Music",
+    "nav4": "Live",
+    "nav5": "Gaming",
+    "nav6": "Preschools",
+    "nav7": "Arabic",
+    "nav8": "Korean dramas",
+    "nav9": "Animated Films",
+    "nav10": "Korean dramas",
+    "nav11": "criticisma",
+    "nav12": "Korean dramas"
+
+  },
+
+  "SIDEBAR": {
+    "side1": "Home",
+    "side2": "Shorts",
+    "side3": "Subscriptions",
+    "side4": "Papaya Music",
+    "side5": "Library",
+    "side6": "History",
+    "side7": "Your Videos",
+    "side8": "Watch Later",
+    "side9": "Downloads",
+    "side10": "Show More",
+    "side11": "criticisma",
+    "side12": "Korean dramas",
+    "title1" : "MY CHANNEL",
+    "title2" : "SUBSCRIPTIONS"
+  },
+
+"ADDVIDEO": {
+  "div1":"Upload a Video",
+  "div2":"User View",
+  "vidTitle":"Video Title",
+  "VideoDescription": "Video Description",
+  "SelectVideo":"Select a video File",
+  "SelectImage": "Select an Image File",
+  "UploadVideo": "Upload Video"
+
+}
+
+  
+}

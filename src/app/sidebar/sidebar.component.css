@@ -18,6 +18,12 @@
   }
 
 
+.arabicSideBar {
+      direction: rtl;
+  }
+
+
+
 .overlay {
     /* Styles for the overlay, covering the entire page */
     position: fixed;
@@ -42,6 +48,11 @@
   }
 
 
+
+
+
+
+
 .sidebar-nav-wrapper div a {
   width: 248px;
   height: 50px;
@@ -59,10 +70,45 @@
 }
 
 
+.arabicSideBar div a {
+  /* float: left; */
+  width: 248px;
+  height: 50px;
+  /* padding: 15px; */
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  letter-spacing: 0em;
+  color: rgba(235, 235, 245, 0.60);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 22px;
+  word-wrap: break-word;
+  
+}
+
+
+
+
+
+
+
+
 .sidebar-nav-wrapper div a .svgIcon {
   float: left;
   margin-right: 20px;
 }
+
+.arabicSideBar div a .svgIcon {
+  float: right;
+  margin-left: 20px; 
+}
+
+
+
+
+
+
 
 
 .sidebar-nav-wrapper div a .titlrOfSvg {
@@ -151,13 +197,22 @@
 }
 
 
-.list-group-item-action {
+
+
+
+
+.sidebar-nav-wrapper .list-group-item-action {
   display: flex;
   align-items: center;
   text-decoration: none; /* Remove default underline for links */
   color: black; /* Set the text color as needed */
   position: relative;
 }
+
+
+
+
+
 
 
 #divItems {
@@ -196,4 +251,8 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   .sidebar-nav-wrapper { margin-top: 100px; }
+}
+
+@media only screen and (max-width: 1200px) {
+  .arabic { margin-top: 100px; }
 }

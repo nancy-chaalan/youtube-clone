@@ -1,25 +1,45 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
-
-  
-  constructor(private router: Router){
-  }
+  lang : any;
 
   isSidebarClosed = false;
   isClicked = false;
 
+  constructor(private router: Router, public translate: TranslateService) {
+      translate.addLangs(['en', 'ar']);
+  }
+  
+ngOnInit(){
+  this.lang = localStorage.getItem('lang' || 'en');
+  this.translate.setDefaultLang(this.lang);
+}      
+
+setLanguage(lang: any){
+  localStorage.setItem('lang', lang.target.value);
+  this.translate.use(lang.target.value)
+}
+
+isArabic(): boolean {
+
+  if (localStorage.getItem('lang') == 'ar')
+      return true;
+   else
+     return false;
+      
+   }
 
 
   // Define the isActive method to color the links in the sidebar
-  isActive(route: string): boolean {
+isActive(route: string): boolean {
       return this.router.isActive(route, true);
     }
     

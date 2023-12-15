@@ -100,12 +100,9 @@ resizeImages(array : any []): any [] {
       }
 
       vid.img = canvas.toDataURL('image/png');
-       console.log("b4 load "+vid.img)
     };
 
     img.src = vid.img;
-
-    console.log("after load "+ img.src)
 
      tempArray.push(vid);
    

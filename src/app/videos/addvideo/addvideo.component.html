@@ -1,33 +1,33 @@
 <div class="container-fluid">
 
 <!-- Left Container -->
-<div class="upload-container cont1">
+<div class="upload-container cont1" >
 
-    <h1>Upload a Video</h1>
+    <h1>{{ 'ADDVIDEO.div1' | translate }}</h1>
 
     <form [formGroup]="myForm">
 
       <!-- video title -->
       <div class="form-group">
-        <label for="videoTitle">Video Title:</label>
+        <label for="videoTitle"> {{ 'ADDVIDEO.vidTitle' | translate }} </label>
         <input type="text" id="videoTitle" name="videoTitle" required (input)="onFieldChange('title', myForm.get('title')?.value)" >
       </div>
 
       <!-- video inside description -->
       <div class="form-group">
-        <label for="videoDescription">Video Description:</label>
+        <label for="videoDescription">{{ 'ADDVIDEO.VideoDescription' | translate }}</label>
         <textarea id="videoDescription" name="videoDescription" required (input)="onFieldChange('title', myForm.get('title')?.value)"></textarea>
       </div>
 
       <!-- video file -->
     <div class="form-group">
-        <label for="videoFile">Select a Video File:</label>
+        <label for="videoFile">{{ 'ADDVIDEO.SelectVideo' | translate }}</label>
         <input type="file" id="videoFile" name="videoFile" accept="video/*" required (input)="onFieldChange('title', myForm.get('title')?.value)">
     </div>
 
       <!-- Image title -->
     <div class="form-group">
-        <label for="imageFile">Select an image File:</label>
+        <label for="imageFile">{{ 'ADDVIDEO.SelectImage' | translate }}</label>
         <input type="file" id="imageFile" name="imageFile" accept="image/*" (change)="onFileChange($event)" required (input)="onFieldChange('title', myForm.get('title')?.value)">
     </div>
 
@@ -42,7 +42,7 @@
 <img *ngIf="selectedImage" [src]="selectedImage" alt="Selected Image" style="width: 200px;">
 
 
-<button (click)="onSubmit()" type="submit">Upload Video</button>
+<button (click)="onSubmit()" type="submit">{{ 'ADDVIDEO.UploadVideo' | translate }}</button>
 
   </form>
 
@@ -66,7 +66,7 @@
 
   <div class="upload-container cont2">
 
-    <h1>User view</h1>
+    <h1>{{ 'ADDVIDEO.div2' | translate }}</h1>
 
     <!-- <form (ngSubmit)="onSubmit()"> -->
 

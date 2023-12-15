@@ -1,17 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnChanges{
 
+  language : any;
+
+  ngOnChanges(): void {
+   this.language = localStorage.getItem('lang');
+   console.log("on changes"+ this.language)
+  }
 
   
-  //  toggleNavbar() {
-  //   const navbar = document.querySelector('.navbar');
-  //   navbar.style.marginTop = navbar.style.marginTop === '0px' ? '-120px' : '0px';
-  // }
+  isArabic(): boolean {
+    if (localStorage.getItem('lang') == 'ar')
+        return true;
+     else
+       return false;
+ }
   
 }

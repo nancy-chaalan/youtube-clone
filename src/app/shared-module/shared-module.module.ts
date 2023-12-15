@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoadingModule } from '../loading/loading.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -30,12 +31,16 @@ import { LoadingModule } from '../loading/loading.module';
   HeaderComponent,
   NavbarComponent,
   SidebarComponent,
+   
   ],
 
   imports: [
     CommonModule,
     SharedRouting,
-    LoadingModule
+    LoadingModule,
+    // BrowserModule,
+    TranslateModule
   ]
+
 })
 export class SharedModuleModule { }

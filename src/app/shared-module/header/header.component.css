@@ -12,6 +12,8 @@
 
 /* the whole container */
 .header {
+  display: block;
+
   justify-content: space-between;
   display: flex;
   background: #2E335A;
@@ -21,10 +23,11 @@
   left: 0; 
   width: 100%;
   z-index: 1000;
-
 }
 
-
+.arabic {
+  flex-direction: row-reverse;
+}
 
 /* three icons to the right */
 .icons {
@@ -107,7 +110,21 @@ input[type="text"] {
 
 
 
+  #label select{
+    border-radius: 10px;
+    background: #bb8ae7;
+    border-style: none;
+    padding: 3px;
+  }
 
+  #label select:focus,
+  #label select:hover
+  {
+    border-radius: 10px;
+    background: #cca4ef;
+    border-style: none;
+    padding: 3px;
+  }
 
 
 
@@ -181,16 +198,6 @@ input[type="text"] {
 .searchIcon { display: block; }
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

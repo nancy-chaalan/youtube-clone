@@ -53,9 +53,13 @@ ngOnInit(): void {
 }
 
 
-
-
-
+  
+isArabic(): boolean {
+  if (localStorage.getItem('lang') == 'ar')
+      return true;
+   else
+     return false;
+}
 
 
 
