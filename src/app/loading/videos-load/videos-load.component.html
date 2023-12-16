@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-      <div class="list-container">
+      <div [ngClass]="{'list-container': true, 'arabic': isArabic()}">
 
         <div class="div-list" *ngFor="let vid of allVideos">
 

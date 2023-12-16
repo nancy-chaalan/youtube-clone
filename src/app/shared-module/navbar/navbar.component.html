@@ -1,10 +1,13 @@
 
+<!-- used ngClass for styling (CSS) ; when it is in arabic convert everything to right-left and vise versa -->
+<!-- used translate ; when it is in arabic convert everything to Arabic Language and vise versa -->
+
 <div class="container-fluid">
 
 <div class="header">  
   
 
-      <ul class="navbar" [ngClass]="{'navbar': true, 'arabic': isArabic()}">
+      <ul [ngClass]="{'navbar': true, 'arabic': isArabic()}">
 
         <li class="firstItem"><a class="right" href="#">{{ 'NAVBAR.nav1' | translate }} </a></li> 
         <li><a class="right" href="#">{{ 'NAVBAR.nav2' | translate }} </a></li>

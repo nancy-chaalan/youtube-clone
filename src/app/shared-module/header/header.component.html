@@ -10,7 +10,7 @@
        <div class="row">
  
 
-        <div class="col" id="svgPapaya">
+        <div [ngClass]="{'col': true, 'col-arabic': isArabic()}" id="svgPapaya">
           <i (click)="handleMenuToggleClick()" id="menu-toggle"  class="mainbtn" [class.clicked]="isClicked"> ☰ </i>
 
           <i class="Papaya" (click)="moveToRoute('/')">
@@ -64,8 +64,7 @@
 
   
 <!-- right icons -->
-
-   <div class="icons"> 
+   <div [ngClass]="{'icons': true, 'icons-arabic': isArabic()}"> 
    
     <label id="label">
       <select #langSelect (change)="setLanguage($event)">

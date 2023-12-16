@@ -13,7 +13,7 @@ export class VideosLoadComponent {
 
   }
 
-  allVideos: any [] = [
+allVideos: any [] = [
     {id: 1, videoID:"2X5g0nUojA4", img:"./assets/videos/img1.jpeg",title:"C3D Site with Spline and React - Full Course", channelName:"Channel", date:"12/1/2023", views:12,smallImg: 'assets/videos/profilePic/a.png', videoTime: '4:30', subscribers: 43, likes: 12},
     {id: 2, videoID:"5bTw_Q9po_s", img:"./assets/videos/img2.jpeg",title:"bla bla bla", channelName:"youtube", date:"1/7/2023", views:17,smallImg: 'assets/videos/profilePic/b.png',  videoTime: '12:30', subscribers: 43, likes: 1200},
     {id: 3, videoID:"KgA2TpKJC30", img:"assets/videos/img3.png",title:"Create 3D Site with Spline and React - Full Course",  channelName:"word", date:"5/1/2023",  views:13,smallImg:'assets/videos/profilePic/a.png', videoTime: '4:30', subscribers: 63, likes: 3002},
@@ -38,6 +38,13 @@ moveToRouteWithIndex(route:string, id:number){
   this.router.navigate( [route], { queryParams: { id: id } }).then(() => window.scrollTo(0,0));
 }
 
+  
+isArabic(): boolean {
+  if (localStorage.getItem('lang') == 'ar')
+      return true;
+   else
+     return false;
+}
 
   
 }

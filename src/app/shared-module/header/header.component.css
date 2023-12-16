@@ -29,6 +29,12 @@
   flex-direction: row-reverse;
 }
 
+
+
+
+
+
+
 /* three icons to the right */
 .icons {
   display: flex;
@@ -161,9 +167,7 @@ input[type="text"] {
   transform: scale(1.2);
 }
 
-/* #menu-toggle.clicked {
-  transform: rotate(-360deg);
-} */
+
 
 
 
@@ -202,12 +206,15 @@ input[type="text"] {
 
 
 
+.col-arabic {
+  direction: rtl;
+  padding-right: 30px;
+} 
 
-
-
-
-
-
+.icons-arabic {
+  direction: rtl;
+  /* padding-right: 30px; */
+} 
 
 
 
@@ -295,8 +302,6 @@ input[type="text"] {
 .modal div div div .btn-close:hover {
   color: rgb(255, 0, 0);
 }
-
-
 
 
 .modal div div .modal-body2 {

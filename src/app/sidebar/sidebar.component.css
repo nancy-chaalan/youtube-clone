@@ -220,8 +220,12 @@
 }
 
 
+
+
+
+
 /* title in sidebar */
-h6 {
+.sidebar-nav-wrapper h6 {
       margin-top: 10px;
       color: #FFFFFF80;
       padding: 20px;
@@ -238,6 +242,23 @@ h6 {
 }
 
 
+
+
+.arabicSideBar h6 {
+  margin-top: 10px;
+  color: #edeaeacc;
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: right;
+
+  height: 17px;
+}
+
+
+
 .divider {
   color: #404040;
   width: 70%;
@@ -251,8 +272,6 @@ h6 {
 
 @media only screen and (max-width: 1200px) {
   .sidebar-nav-wrapper { margin-top: 100px; }
-}
 
-@media only screen and (max-width: 1200px) {
   .arabic { margin-top: 100px; }
 }

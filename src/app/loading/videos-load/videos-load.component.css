@@ -21,6 +21,10 @@
   cursor: pointer;
 }
 
+.arabic {
+  direction: rtl;
+}
+
 
 .div-list{
   background: linear-gradient(180deg, rgba(89, 65, 175, 0.2) 0%, rgba(72, 49, 157, 0) 100%);
