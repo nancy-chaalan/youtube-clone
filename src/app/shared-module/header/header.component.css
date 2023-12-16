@@ -203,7 +203,9 @@ input[type="text"] {
 
 }
 
-
+.selectArab option[value='ar']{
+    order: -1; /* This will make the Arabic option appear first */
+  }
 
 
 .col-arabic {

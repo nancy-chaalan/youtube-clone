@@ -67,7 +67,7 @@
    <div [ngClass]="{'icons': true, 'icons-arabic': isArabic()}"> 
    
     <label id="label">
-      <select #langSelect (change)="setLanguage($event)">
+      <select [ngClass]="{'select': true, 'selectArab': isArabic()}" #langSelect (change)="setLanguage($event)">
         <option value='en' [selected]="lang === 'en'">English</option>
         <option value='ar' [selected]="lang === 'ar'">Arabic</option>
       </select>

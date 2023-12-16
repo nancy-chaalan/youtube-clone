@@ -16,7 +16,6 @@ export class SidebarComponent {
 
   ngOnChanges(): void {
    this.language = localStorage.getItem('lang');
-   console.log("on changes"+ this.language)
   }
 
   

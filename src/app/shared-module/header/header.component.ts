@@ -19,12 +19,15 @@ export class HeaderComponent implements OnInit{
   }
   
 ngOnInit(){
-  this.lang = localStorage.getItem('lang' || 'en');
-  this.translate.setDefaultLang(this.lang);
+  this.lang = localStorage.getItem('lang');
+  console.log(this.lang);
+  this.translate.use(this.lang);
+  // this.translate.setDefaultLang(this.lang);
 }      
 
 setLanguage(lang: any){
   localStorage.setItem('lang', lang.target.value);
+  console.log("dd "+ lang.target.value)
   this.translate.use(lang.target.value)
 }
 
