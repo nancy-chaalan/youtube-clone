@@ -15,5 +15,15 @@ export class StoriesComponentComponent {
   storiesArray : any [] = this.service.allStories ;
 
 
+
+  
+  isArabic(): boolean {
+    if (localStorage.getItem('lang') == 'ar')
+        return true;
+     else
+       return false;
+  }
+  
+  
 }
 

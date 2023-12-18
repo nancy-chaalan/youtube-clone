@@ -27,7 +27,18 @@
   }
 
 
+.arabicHeader {
+  height: 56px;
+  width: 100vw;
+  background: radial-gradient(ellipse at bottom, #612778 0%, #2E335A 60%);
 
+  display: block;
+  overflow: hidden;
+
+  position: fixed;
+  margin-top: 150px;
+  z-index: 1000;
+}
 
   
 .navbar {
