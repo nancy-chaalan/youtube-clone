@@ -3,13 +3,13 @@
     <!-- Left Container -->
     <div class="upload-container cont1">
     
-        <h1>Upload a Video</h1>
+        <h1>Create Channel</h1>
     
         <form [formGroup]="myForm">
     
           <!-- video title -->
           <div class="form-group">
-            <label for="videoTitle">Video Title:</label>
+            <label for="videoTitle">Channel name:</label>
             <input type="text" id="videoTitle" name="videoTitle" required (input)="onFieldChange('title', myForm.get('title')?.value)" >
           </div>
     

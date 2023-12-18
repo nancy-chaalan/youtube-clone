@@ -11,12 +11,15 @@ export class HeaderComponent implements OnInit{
 
   lang : any;
 
+  showDropdownFlag = false;
+
   isSidebarClosed = false;
   isClicked = false;
 
   constructor(private router: Router, public translate: TranslateService) {
       translate.addLangs(['en', 'ar']);
   }
+  
   
 ngOnInit(){
   this.lang = localStorage.getItem('lang');
@@ -39,6 +42,22 @@ isArabic(): boolean {
      return false;
       
    }
+
+
+   showDropdown() {
+    this.showDropdownFlag = true;
+  }
+  hideDropdown() {
+    // A delay to let the user click on the dropdown list before hiding it
+    setTimeout(() => {
+      this.showDropdownFlag = false;
+    }, 200);
+  }
+
+
+
+
+
 
 
   // Define the isActive method to color the links in the sidebar

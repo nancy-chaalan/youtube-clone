@@ -136,6 +136,15 @@
 
 }
 
+
+/* .sidebar-nav-wrapper .sidebar .divider:hover,
+.sidebar-nav-wrapper .sidebar .divider:active,
+.sidebar-nav-wrapper .sidebar .divider:focus {
+   background: radial-gradient(38.89% 100.00% at 40.88% 0.00%, #8015A7 0%, rgba(97, 54, 144, 0) 100%);
+} */
+
+
+
   
 .dots .div1{
     width: 100%; 

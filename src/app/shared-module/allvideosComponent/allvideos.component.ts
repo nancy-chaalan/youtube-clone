@@ -47,7 +47,7 @@ editedArray: any []=[];
 
 
 ngOnInit(): void {
-  this.editedArray = this.service.resizeImages(this.allVideos);console.log(this.editedArray)
+  this.editedArray = this.service.resizeImages(this.allVideos);
   // this.done = false
    setTimeout(() => {  this.done = false }, 1500);
 }

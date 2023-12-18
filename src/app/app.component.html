@@ -10,16 +10,14 @@
 <!-- ========== header end ========== -->
 
 
-
 <main class="main-wrapper" [ngClass]="{'main-wrapper': true, 'main-wrapper-arabic': isArabic()}">
 
         <app-sidebar></app-sidebar>   
-        <app-navbar [ngClass]="{'navbar': true, 'navbar-arabic': isArabic()}"></app-navbar>
+        <app-navbar class="navbar"></app-navbar>
   
 <section class="section">    
           <router-outlet></router-outlet>   
 </section>
-
 
           <!-- <app-footer></app-footer> -->
      <!-- ========== footer end =========== -->

@@ -86,6 +86,47 @@ svg {
 
 
 
+
+
+
+
+
+
+
+.threeDots {
+  border-style: none;
+  background: none;
+  /* size: 80px; */
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.search svg {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  fill: #666; /* Change the color of the icon as needed */
+}
+
+.search svg.left {
+  left: 10px; /* Adjust the left position for the left icon */
+}
+
+.search svg.right {
+  right: 10px; /* Adjust the right position for the right icon */
+}
+
+
 .search input{
     background: linear-gradient(135deg, rgba(15, 85, 232, 0.10) 0%, rgba(157, 223, 243, 0.10) 100%);
     border-radius: 40px;
@@ -93,13 +134,25 @@ svg {
     width: 445px;
     height: 40px;
     top: 8px;
-  }
+    
+    padding-left: 30px; /* Adjust the padding to accommodate the left icon */
+    padding-right: 30px; /* Adjust the padding to accommodate the right icon */
+
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    height: 40px;
+    outline: none;
+    }
   
+
+
 .search {
     display: flex;
     align-items: center;
     position: relative;
-  }
+}
+
 
 input[type="text"] {
     padding: 10px;
@@ -109,10 +162,16 @@ input[type="text"] {
     color: white;
   }
   
-.search svg {
-    position: absolute;
-  }
+
   
+
+
+
+
+
+
+
+
 
 
 
@@ -273,9 +332,7 @@ input[type="text"] {
 
 .modal div div{
   background: linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%); 
-
 }
-
 
 .modal div div .modal-body .card {
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
@@ -328,3 +385,16 @@ input[type="text"] {
   background-color: #ddd;
   outline: none;
 }
+
+
+
+
+.user2-arabic, .user1-arabic {
+direction: rtl;
+}
+
+.user2-arabic .modal-header, .user1-arabic  .modal-header {
+  justify-content: space-between;
+}
+
+

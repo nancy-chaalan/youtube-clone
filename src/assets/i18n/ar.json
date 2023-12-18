@@ -41,6 +41,17 @@
       "SelectImage": "حدد ملف صورة",
       "UploadVideo": "رفع فيديو"
 
+    },
+
+    "userInfo": {
+      "UserInfo":"معلومات المستخدم",
+      "name":"Nancy Chaalan",
+      "":"Video Title",
+      "EditBtn": "تحديث",
+      "NameLabel":"اسم المستخدم",
+      "EmailLabel": "بريد إلكتروني",
+      "PassLabel": "كلمة المرور",
+      "PassRepeatLabel": "اعد كلمة السر"
     }
 
 

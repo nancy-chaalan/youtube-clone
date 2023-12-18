@@ -1,9 +1,11 @@
 
+
 <div class="container-fluid">
 
 
   <div class="header"  [ngClass]="{'header': true, 'arabic': isArabic()}">
 
+      
 <!-- Papaya Title -->
 <div class="title">
       
@@ -30,34 +32,25 @@
 
      </div> 
 
+  
+
 <!-- search bar -->
     <div class="search" >
      
-      <svg width="442" height="40" viewBox="0 0 442 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="442" height="40" rx="20" fill="url(#paint0_linear_1230_9612)" fill-opacity="0.1"/>
-        <rect x="0.5" y="0.5" width="441" height="39" rx="19.5" stroke="white" stroke-opacity="0.5" style="mix-blend-mode:overlay"/>
-        <defs>
-        <linearGradient id="paint0_linear_1230_9612" x1="-221" y1="20" x2="-213.819" y2="99.3501" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#0F55E8"/>
-        <stop offset="1" stop-color="#9DDFF3"/>
-        </linearGradient>
-        </defs>
-        <rect width="20" height="20" fill="url(#paint0_linear_1230_9612)" fill-opacity="0.1"/>
+      <svg class="left" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+        <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
         </svg>
         
      <input type="text" placeholder="Search...">
 
-     <svg width="442" height="40" viewBox="0 0 442 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="442" height="40" rx="20" fill="url(#paint0_linear_1230_9612)" fill-opacity="0.1"/>
-      <rect x="0.5" y="0.5" width="441" height="39" rx="19.5" stroke="white" stroke-opacity="0.5" style="mix-blend-mode:overlay"/>
-      <defs>
-      <linearGradient id="paint0_linear_1230_9612" x1="-221" y1="20" x2="-213.819" y2="99.3501" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F55E8"/>
-      <stop offset="1" stop-color="#9DDFF3"/>
-      </linearGradient>
-      </defs>
-      <rect width="20" height="20" fill="url(#paint0_linear_1230_9612)" fill-opacity="0.1"/>
-      </svg>
+     <svg class="right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="800px" width="800px" version="1.1" viewBox="0 0 512 512" enable-background="new 0 0 512 512">
+      <g>
+        <g>
+          <path d="m439.5,236c0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,70-64,126.9-142.7,126.9-78.7,0-142.7-56.9-142.7-126.9 0-11.3-9.1-20.4-20.4-20.4s-20.4,9.1-20.4,20.4c0,86.2 71.5,157.4 163.1,166.7v57.5h-23.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-23.6v-57.5c91.6-9.3 163.1-80.5 163.1-166.7z"/>
+          <path d="m256,323.5c51,0 92.3-41.3 92.3-92.3v-127.9c0-51-41.3-92.3-92.3-92.3s-92.3,41.3-92.3,92.3v127.9c0,51 41.3,92.3 92.3,92.3zm-52.3-220.2c0-28.8 23.5-52.3 52.3-52.3s52.3,23.5 52.3,52.3v127.9c0,28.8-23.5,52.3-52.3,52.3s-52.3-23.5-52.3-52.3v-127.9z"/>
+        </g>
+      </g>
+    </svg>
 
 
     </div>
@@ -72,6 +65,22 @@
         <option value='ar' [selected]="lang === 'ar'">Arabic</option>
       </select>
     </label>
+
+    <div class="dropdown">
+      <button onclick="toggleDropdown()" class="dropbtn threeDots">⁝</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <svg  viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M4.40649 15.9668H14.0452C16.3303 15.9668 17.6877 14.6387 17.6877 12.3633V11.1426L21.135 14.0625C21.5159 14.3848 21.9456 14.6094 22.3362 14.6094C23.1565 14.6094 23.7131 14.0039 23.7131 13.125V3.54493C23.7131 2.66602 23.1565 2.07032 22.3362 2.07032C21.9456 2.07032 21.5159 2.28516 21.135 2.6172L17.6877 5.52735V4.28712C17.6877 2.02149 16.3303 0.693367 14.0452 0.693367H4.40649C2.20923 0.693367 0.763916 2.02149 0.763916 4.28712V12.3828C0.763916 14.6582 2.12134 15.9668 4.40649 15.9668ZM4.67993 14.4922C3.18579 14.4922 2.33618 13.7109 2.33618 12.1289V4.52149C2.33618 2.94923 3.18579 2.16798 4.67993 2.16798H13.7717C15.2561 2.16798 16.1155 2.94923 16.1155 4.52149V12.1289C16.1155 13.7109 15.2561 14.4922 13.7717 14.4922H4.67993ZM21.8284 12.7246L17.6877 9.31641V7.35352L21.8284 3.95509C21.9065 3.88673 21.9651 3.84766 22.0432 3.84766C22.1506 3.84766 22.1995 3.92579 22.1995 4.05274V12.6172C22.1995 12.7441 22.1506 12.832 22.0432 12.832C21.9651 12.832 21.9065 12.7832 21.8284 12.7246Z"/>
@@ -103,14 +112,13 @@
 
 
 
-
 <!-- Modal -->
 
-<div  [class.arabic-design]="isArabic()" class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<div [ngClass]="{'modal': true, 'user1-arabic': isArabic()}" class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel">User Info</h5>
+        <h5 class="modal-title" id="exampleModalToggleLabel">{{ 'userInfo.UserInfo' | translate }}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -118,10 +126,11 @@
       <div class="modal-body">
         <div class="card">
           <img src="./assets/videos/img3.png" alt="John" style="width:100%">
-          <h1>John Doe</h1>
-          <p class="title">CEO & Founder, Example</p>
+          <h1> {{ 'userInfo.name' | translate }} </h1>
+          <!-- <p class="title">CEO & Founder, Example</p> -->
           <p>Harvard University</p>
-          <p><button class="btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Edit</button></p>
+          <p><button class="btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
+            {{ 'userInfo.EditBtn' | translate }}</button></p>
         </div>
       </div>
 
@@ -132,7 +141,7 @@
 
 
 
-<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+<div [ngClass]="{'modal': true, 'user2-arabic': isArabic()}" class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -144,16 +153,16 @@
     
         <form class="modal-body2" action="/action_page.php">
 
-          <label for="name"><b>Name</b></label>
+          <label for="name"><b>{{ 'userInfo.NameLabel' | translate }} </b></label>
           <input type="text" placeholder="Enter Name" name="name" required>
 
-            <label for="email"><b>Email</b></label>
+            <label for="email"><b>{{ 'userInfo.EmailLabel' | translate }}</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
       
-            <label for="psw"><b>Password</b></label>
+            <label for="psw"><b>{{ 'userInfo.PassLabel' | translate }}</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
       
-            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <label for="psw-repeat"><b>{{ 'userInfo.PassRepeatLabel' | translate }}</b></label>
             <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
         </form>
@@ -168,3 +177,6 @@
     </div>
   </div>
 </div>
+
+
+

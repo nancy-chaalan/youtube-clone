@@ -42,7 +42,18 @@
   "SelectImage": "Select an Image File",
   "UploadVideo": "Upload Video"
 
-}
+},
 
+
+"userInfo": {
+  "UserInfo":"User Info",
+  "name":"Nancy Chaalan",
+  "":"Video Title",
+  "EditBtn": "Edit",
+  "NameLabel":"Name",
+  "EmailLabel": "Email",
+  "PassLabel": "Password",
+  "PassRepeatLabel": "Repeat Password"
+}
   
 }
