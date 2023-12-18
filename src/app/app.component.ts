@@ -45,7 +45,17 @@ loadUserInfo(){
         {
           localStorage.setItem('lang','ar');  
           this.translate.use("ar");
-          console.log("helo");
+      }
+
+      else if (response.country_code == 'US' || localStorage.getItem('lang')){
+        localStorage.setItem('lang','en');  
+        this.translate.use("en");
+      }
+
+      else
+      {
+        localStorage.setItem('lang','en');  
+        this.translate.use("en");
       }
           },
 
